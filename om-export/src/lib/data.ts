@@ -239,23 +239,23 @@ export const products: Product[] = [
 export const founders: Founder[] = [
   {
     name: "Jayesh Avaiya",
-    title: "Founder & CEO",
-    phone: "+91 98765 43210",
-    email: "jayesh@omexport.com",
+    title: "Founder",
+    phone: "+91 99253 53952",
+    email: "[EMAIL_ADDRESS]",
     image: "/founders/jayesh.jpg",
   },
   {
     name: "Dipak Nakrani",
-    title: "Co-Founder & COO",
-    phone: "+91 98765 43211",
-    email: "dipak@omexport.com",
+    title: "Founder",
+    phone: "+91 97146 91751",
+    email: "[EMAIL_ADDRESS]",
     image: "/founders/dipak.jpg",
   },
   {
     name: "Kalpesh Sabhani",
-    title: "Co-Founder & CTO",
-    phone: "+91 98765 43212",
-    email: "kalpesh@omexport.com",
+    title: "Founder",
+    phone: "+91 99097 88944",
+    email: "[EMAIL_ADDRESS]",
     image: "/founders/kalpesh.jpg",
   },
 ];

@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#071C36] text-white">
       {/* Main Footer */}
-      <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
+      <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-12 sm:py-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-16">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
@@ -102,7 +102,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 py-7 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-5 sm:py-7 flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-white/40 text-sm">
             © {new Date().getFullYear()} OM Export. All rights reserved.
           </p>

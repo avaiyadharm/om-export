@@ -32,22 +32,22 @@ export default function Navbar() {
           : "bg-[#0B1F3A]"
       }`}
     >
-      <div className="w-full max-w-[1600px] mx-auto px-8 lg:px-16">
-        <div className="flex items-center justify-between h-22">
+      <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+        <div className="flex items-center justify-between h-16 sm:h-22">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
-              className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FFE088] to-[#A48300] flex items-center justify-center shadow-lg shadow-[#D4AF37]/20"
+              className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#FFE088] to-[#A48300] flex items-center justify-center shadow-lg shadow-[#D4AF37]/20"
             >
-              <Globe className="w-6 h-6 text-[#241A00]" />
+              <Globe className="w-4 h-4 sm:w-6 sm:h-6 text-[#241A00]" />
             </motion.div>
             <div>
-              <span className="text-2xl font-bold text-white tracking-tight" style={{ fontFamily: "Playfair Display, serif" }}>
+              <span className="text-lg sm:text-2xl font-bold text-white tracking-tight" style={{ fontFamily: "Playfair Display, serif" }}>
                 OM EXPORT
               </span>
-              <span className="block text-[11px] text-[#D4AF37] tracking-[0.25em] uppercase font-medium -mt-0.5" style={{ fontFamily: "Manrope, sans-serif" }}>
+              <span className="hidden sm:block text-[11px] text-[#D4AF37] tracking-[0.25em] uppercase font-medium -mt-0.5" style={{ fontFamily: "Manrope, sans-serif" }}>
                 Global Trade
               </span>
             </div>

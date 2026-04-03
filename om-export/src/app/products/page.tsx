@@ -25,7 +25,7 @@ export default function ProductsPage() {
   return (
     <div className="pt-20 min-h-screen bg-[#F9F9FF]">
       {/* Page Header */}
-      <section className="bg-[#071C36] py-16 relative overflow-hidden">
+      <section className="bg-[#071C36] py-10 sm:py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]">
           <div
             className="absolute inset-0"
@@ -34,7 +34,7 @@ export default function ProductsPage() {
             }}
           />
         </div>
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 relative z-10">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,10 +45,10 @@ export default function ProductsPage() {
               <span>/</span>
               <span className="text-white/70">Products</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-5" style={{ fontFamily: "Playfair Display, serif" }}>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: "Playfair Display, serif" }}>
               Our Export Products
             </h1>
-            <p className="text-white/50 text-lg max-w-2xl leading-relaxed">
+            <p className="text-white/50 text-sm sm:text-lg max-w-2xl leading-[1.7] sm:leading-[1.8]">
               Browse through our premium export catalog of Indian products across diverse categories.
             </p>
           </motion.div>
@@ -57,7 +57,7 @@ export default function ProductsPage() {
 
       {/* Search & Filters */}
       <section className="sticky top-20 z-30 bg-white/80 backdrop-blur-xl border-b border-[#E7EEFF]">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 py-6">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
             {/* Search */}
             <div className="relative flex-1 max-w-lg">
@@ -72,11 +72,11 @@ export default function ProductsPage() {
             </div>
 
             {/* Category filters */}
-            <div className="flex items-center gap-3 overflow-x-auto pb-1 scrollbar-hide">
+            <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-1 scrollbar-hide">
               <SlidersHorizontal className="w-4 h-4 text-[#6B7280] shrink-0 hidden md:block" />
               <button
                 onClick={() => setActiveCategory("all")}
-                className={`shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                   activeCategory === "all"
                     ? "bg-[#071C36] text-white"
                     : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#DEE8FF]"
@@ -88,7 +88,7 @@ export default function ProductsPage() {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`shrink-0 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                     activeCategory === cat.id
                       ? "bg-[#071C36] text-white"
                       : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#DEE8FF]"
@@ -103,8 +103,8 @@ export default function ProductsPage() {
       </section>
 
       {/* Product Grid */}
-      <section className="py-14">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
+      <section className="py-8 sm:py-14">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <AnimatedSection>
             <p className="text-base text-[#6B7280] mb-10">
               Showing <span className="font-semibold text-[#071C36]">{filteredProducts.length}</span>{" "}
@@ -127,7 +127,7 @@ export default function ProductsPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
             >
               {filteredProducts.map((product, i) => (
                 <motion.div
@@ -153,14 +153,14 @@ export default function ProductsPage() {
                           </span>
                         </div>
                       </div>
-                      <div className="p-8">
-                        <h3 className="text-xl font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400" style={{ fontFamily: "Manrope, sans-serif" }}>
+                      <div className="p-5 sm:p-7 lg:p-8">
+                        <h3 className="text-lg sm:text-xl font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400" style={{ fontFamily: "Manrope, sans-serif" }}>
                           {product.name}
                         </h3>
                         <p className="text-sm text-[#A48300] uppercase tracking-wider font-medium mb-3">
                           {product.tagline}
                         </p>
-                        <p className="text-base text-[#6B7280] line-clamp-2 mb-5 leading-relaxed">
+                        <p className="text-sm sm:text-base text-[#6B7280] line-clamp-2 mb-4 sm:mb-5 leading-[1.7]">
                           {product.description}
                         </p>
                         <div className="flex items-center justify-between pt-5 border-t border-[#F0F3FF]">

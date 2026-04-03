@@ -71,7 +71,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   return (
     <div className="pt-20 min-h-screen bg-[#F9F9FF]">
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <section className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden">
         <Image
           src={product.images[0] || product.imageUrl}
           alt={product.name}
@@ -82,8 +82,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#071C36] via-[#071C36]/40 to-transparent" />
 
-        <div className="absolute bottom-0 left-0 right-0 p-10 lg:p-20">
-          <div className="w-full max-w-[1600px] mx-auto">
+        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 md:p-16 lg:p-24 xl:p-32">
+          <div className="w-full">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -100,21 +100,21 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 {product.category}
               </span>
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 mb-4"
+                className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 sm:mt-4 mb-3 sm:mb-5"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 {product.name}
               </h1>
-              <p className="text-white/60 text-xl max-w-2xl leading-relaxed">{product.tagline}</p>
+              <p className="text-white/60 text-base sm:text-xl max-w-2xl leading-[1.7] sm:leading-[1.8]">{product.tagline}</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Product Content */}
-      <section className="py-20">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
-          <div className="grid lg:grid-cols-5 gap-20">
+      <section className="py-10 sm:py-20">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+          <div className="grid lg:grid-cols-5 gap-10 sm:gap-14 lg:gap-20">
             {/* Left: Image Gallery + Specs */}
             <div className="lg:col-span-3">
               {/* Image Gallery */}
@@ -131,12 +131,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                   </div>
                 </div>
                 {product.images.length > 1 && (
-                  <div className="flex gap-4 mb-14">
+                  <div className="flex gap-3 sm:gap-4 mb-10 sm:mb-14">
                     {product.images.map((img, i) => (
                       <button
                         key={i}
                         onClick={() => setActiveImage(i)}
-                        className={`relative w-22 h-22 rounded-xl overflow-hidden transition-all duration-500 ${
+                        className={`relative w-16 h-16 sm:w-22 sm:h-22 rounded-xl overflow-hidden transition-all duration-500 ${
                           activeImage === i
                             ? "ring-2 ring-[#D4AF37] ring-offset-3"
                             : "opacity-60 hover:opacity-100"
@@ -153,12 +153,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               <AnimatedSection variant="fadeUp" delay={0.1}>
                 <div className="mb-14">
                   <h2
-                    className="text-2xl font-bold text-[#071C36] mb-5"
+                    className="text-xl sm:text-2xl font-bold text-[#071C36] mb-4 sm:mb-5"
                     style={{ fontFamily: "Playfair Display, serif" }}
                   >
                     About This Product
                   </h2>
-                  <p className="text-[#6B7280] text-lg leading-relaxed">{product.description}</p>
+                  <p className="text-[#6B7280] text-lg leading-[1.8]">{product.description}</p>
                 </div>
               </AnimatedSection>
 
@@ -170,7 +170,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 >
                   Specifications
                 </h2>
-                <div className="bg-white rounded-2xl p-10">
+                <div className="bg-white rounded-2xl p-5 sm:p-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
                     <div className="flex justify-between py-4 border-b border-[#F0F3FF]">
                       <span className="text-sm text-[#6B7280] uppercase tracking-wider">Origin</span>
@@ -201,7 +201,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             <div className="lg:col-span-2">
               <AnimatedSection variant="slideRight" delay={0.3}>
                 <div className="sticky top-28">
-                  <div className="bg-[#F0F3FF] rounded-2xl p-10">
+                  <div className="bg-[#F0F3FF] rounded-2xl p-5 sm:p-10">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-1.5 h-7 bg-gradient-to-b from-[#FFE088] to-[#D4AF37] rounded-full" />
                       <h2
@@ -345,7 +345,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="py-20 bg-white">
-          <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
+          <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
             <AnimatedSection>
               <h2
                 className="text-3xl font-bold text-[#071C36] mb-10"
@@ -355,7 +355,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               </h2>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
               {relatedProducts.map((rp, i) => (
                 <motion.div
                   key={rp.id}
@@ -375,8 +375,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                           sizes="(max-width: 768px) 50vw, 25vw"
                         />
                       </div>
-                      <div className="p-6">
-                        <h3 className="text-base font-bold text-[#071C36] group-hover:text-[#A48300] transition-colors duration-400">
+                      <div className="p-4 sm:p-6">
+                        <h3 className="text-sm sm:text-base font-bold text-[#071C36] group-hover:text-[#A48300] transition-colors duration-400">
                           {rp.name}
                         </h3>
                         <span className="text-sm text-[#6B7280] mt-2 inline-flex items-center gap-1">
@@ -393,7 +393,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       )}
 
       {/* Back button */}
-      <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 py-10">
+      <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-8 sm:py-10">
         <Link
           href="/products"
           className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#A48300] transition-colors duration-400 text-sm"

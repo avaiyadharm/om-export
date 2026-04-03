@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO SECTION ===== */}
-      <section className="relative min-h-[100vh] flex items-center overflow-hidden bg-[#071C36]">
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-[#071C36]">
         {/* Animated background pattern */}
         <div className="absolute inset-0 opacity-[0.05]">
           <div
@@ -34,18 +34,18 @@ export default function HomePage() {
 
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
-          className="relative z-10 w-full max-w-[1600px] mx-auto px-10 lg:px-20 py-36 pt-44"
+          className="relative z-10 w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-20 pt-28 md:py-36 md:pt-44"
         >
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div>
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5 sm:mb-8"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span className="text-white/70 text-sm tracking-wider uppercase font-medium">
+                <span className="text-white/70 text-xs sm:text-sm tracking-wider uppercase font-medium">
                   Trusted by 1000+ buyers worldwide
                 </span>
               </motion.div>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-[1.05] mb-10"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-[1.15] mb-6 sm:mb-12"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Global Export
@@ -68,7 +68,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5 }}
-                className="text-xl text-white/60 max-w-xl leading-relaxed mb-14"
+                className="text-base sm:text-xl text-white/60 max-w-2xl leading-[1.7] sm:leading-[1.8] mb-8 sm:mb-14"
               >
                 Connecting businesses worldwide with premium Indian exports across{" "}
                 <span className="text-[#D4AF37] font-medium">50+ countries</span>. Your trusted
@@ -79,18 +79,18 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="flex flex-wrap gap-5"
+                className="flex flex-wrap gap-3 sm:gap-5"
               >
                 <Link
                   href="/products"
-                  className="group inline-flex items-center gap-3 px-10 py-5 text-base bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
+                  className="group inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
                 >
                   Explore Products
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 px-10 py-5 text-base border border-white/20 text-white font-medium rounded-xl hover:bg-white/5 transition-all duration-500"
+                  className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base border border-white/20 text-white font-medium rounded-xl hover:bg-white/5 transition-all duration-500"
                 >
                   Contact Us
                 </Link>
@@ -154,8 +154,8 @@ export default function HomePage() {
 
       {/* ===== STATS BAR ===== */}
       <section className="bg-[#0B1F3A] border-t border-white/5">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 py-12">
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-14">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-8 sm:py-14">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 lg:gap-16">
             {[
               { icon: Globe, value: "50+", label: "Countries Served" },
               { icon: Package, value: "200+", label: "Products" },
@@ -163,15 +163,15 @@ export default function HomePage() {
               { icon: Award, value: "10+", label: "Years Experience" },
             ].map((stat) => (
               <StaggerItem key={stat.label}>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
-                    <stat.icon className="w-6 h-6 text-[#D4AF37]" />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+                    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37]" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-white" style={{ fontFamily: "Playfair Display, serif" }}>
+                    <p className="text-xl sm:text-3xl font-bold text-white" style={{ fontFamily: "Playfair Display, serif" }}>
                       {stat.value}
                     </p>
-                    <p className="text-white/40 text-sm uppercase tracking-wider mt-1">{stat.label}</p>
+                    <p className="text-white/40 text-[10px] sm:text-sm uppercase tracking-wider mt-0.5 sm:mt-1">{stat.label}</p>
                   </div>
                 </div>
               </StaggerItem>
@@ -181,40 +181,40 @@ export default function HomePage() {
       </section>
 
       {/* ===== CATEGORIES SECTION ===== */}
-      <section className="py-32 bg-[#F0F3FF]">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
-          <AnimatedSection className="text-center mb-16">
+      <section className="py-16 sm:py-32 bg-[#F0F3FF]">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+          <AnimatedSection className="text-center mb-10 sm:mb-20">
             <span className="text-[#A48300] text-sm tracking-[0.15em] uppercase font-semibold">
               What We Export
             </span>
             <h2
-              className="text-4xl md:text-5xl font-bold text-[#071C36] mt-4 mb-5"
+              className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-4 sm:mb-6"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Our Export Categories
             </h2>
-            <p className="text-[#6B7280] text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#6B7280] text-sm sm:text-lg max-w-3xl mx-auto leading-[1.7] sm:leading-[1.8]">
               From farm produce to fine jewellery, we export a diverse range of premium Indian
               products to markets worldwide.
             </p>
           </AnimatedSection>
 
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-8">
             {categories.map((cat) => (
               <StaggerItem key={cat.id}>
                 <Link href={`/products?category=${cat.id}`}>
-                  <div className="group bg-white rounded-2xl p-10 text-center cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(7,28,54,0.1)]">
-                    <div className="text-5xl mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <div className="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-10 text-center cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(7,28,54,0.1)]">
+                    <div className="text-3xl sm:text-5xl mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300">
                       {cat.icon}
                     </div>
                     <h3
-                      className="text-base font-semibold text-[#071C36] mb-2"
+                      className="text-sm sm:text-base font-semibold text-[#071C36] mb-1 sm:mb-2"
                       style={{ fontFamily: "Manrope, sans-serif" }}
                     >
                       {cat.name}
                     </h3>
-                    <p className="text-sm text-[#6B7280]">{cat.productCount} products</p>
-                    <div className="w-8 h-0.5 bg-[#D4AF37] mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+                    <p className="text-xs sm:text-sm text-[#6B7280]">{cat.productCount} products</p>
+                    <div className="w-8 h-0.5 bg-[#D4AF37] mx-auto mt-3 sm:mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
                   </div>
                 </Link>
               </StaggerItem>
@@ -224,15 +224,15 @@ export default function HomePage() {
       </section>
 
       {/* ===== FEATURED PRODUCTS ===== */}
-      <section className="py-32 bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
-          <AnimatedSection className="flex items-end justify-between mb-14">
+      <section className="py-16 sm:py-32 bg-white">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+          <AnimatedSection className="flex items-end justify-between mb-8 sm:mb-16">
             <div>
               <span className="text-[#A48300] text-sm tracking-[0.15em] uppercase font-semibold">
                 Curated Selection
               </span>
               <h2
-                className="text-4xl md:text-5xl font-bold text-[#071C36] mt-4"
+                className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#071C36] mt-3 sm:mt-5"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Featured Products
@@ -246,7 +246,7 @@ export default function HomePage() {
             </Link>
           </AnimatedSection>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
             {featuredProducts.slice(0, 6).map((product) => (
               <StaggerItem key={product.id}>
                 <Link href={`/products/${product.id}`}>
@@ -266,14 +266,14 @@ export default function HomePage() {
                         </span>
                       </div>
                     </div>
-                    <div className="p-8">
+                    <div className="p-5 sm:p-7 lg:p-8">
                       <h3
-                        className="text-xl font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400"
+                        className="text-lg sm:text-xl font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400"
                         style={{ fontFamily: "Manrope, sans-serif" }}
                       >
                         {product.name}
                       </h3>
-                      <p className="text-base text-[#6B7280] line-clamp-2 mb-5 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[#6B7280] line-clamp-2 mb-4 sm:mb-5 leading-[1.7]">
                         {product.description}
                       </p>
                       <div className="flex items-center justify-between">
@@ -303,30 +303,30 @@ export default function HomePage() {
       </section>
 
       {/* ===== ABOUT SECTION ===== */}
-      <section className="py-32 bg-[#F0F3FF]">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <section className="py-16 sm:py-32 bg-[#F0F3FF]">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center">
             <AnimatedSection variant="slideLeft">
               <span className="text-[#A48300] text-xs tracking-[0.15em] uppercase font-semibold">
                 About OM Export
               </span>
               <h2
-                className="text-4xl md:text-5xl font-bold text-[#071C36] mt-4 mb-8"
+                className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-6 sm:mb-10"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Your Trusted Partner in Global Trade
               </h2>
-              <p className="text-lg text-[#6B7280] leading-relaxed mb-10">{companyInfo.description}</p>
-              <div className="grid grid-cols-2 gap-6">
+              <p className="text-base sm:text-lg text-[#6B7280] leading-[1.7] sm:leading-[1.8] mb-8 sm:mb-12">{companyInfo.description}</p>
+              <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:gap-6">
                 {[
                   { value: "50+", label: "Countries" },
                   { value: "200+", label: "Products" },
                   { value: "1000+", label: "Clients" },
                   { value: "10+", label: "Years" },
                 ].map((stat) => (
-                  <div key={stat.label} className="bg-white rounded-xl p-6">
+                  <div key={stat.label} className="bg-white rounded-xl p-4 sm:p-6">
                     <p
-                      className="text-3xl font-bold text-[#A48300]"
+                      className="text-2xl sm:text-3xl font-bold text-[#A48300]"
                       style={{ fontFamily: "Playfair Display, serif" }}
                     >
                       {stat.value}
@@ -340,26 +340,26 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AnimatedSection variant="slideRight">
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
                 {founders.map((founder, i) => (
                   <div
                     key={founder.name}
-                    className={`bg-white rounded-2xl p-7 text-center ${
-                      i === 1 ? "translate-y-6" : ""
+                    className={`bg-white rounded-xl sm:rounded-2xl p-5 sm:p-7 text-center ${
+                      i === 1 ? "sm:translate-y-6" : ""
                     }`}
                   >
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-white text-xl font-bold">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] mx-auto mb-3 sm:mb-4 flex items-center justify-center">
+                      <span className="text-white text-lg sm:text-xl font-bold">
                         {founder.name.charAt(0)}
                       </span>
                     </div>
                     <h3
-                      className="text-base font-bold text-[#071C36]"
+                      className="text-sm sm:text-base font-bold text-[#071C36] leading-snug"
                       style={{ fontFamily: "Manrope, sans-serif" }}
                     >
                       {founder.name}
                     </h3>
-                    <p className="text-xs text-[#6B7280] uppercase tracking-wider mt-2">
+                    <p className="text-[10px] sm:text-xs text-[#6B7280] uppercase tracking-wider mt-1.5 sm:mt-2">
                       {founder.title}
                     </p>
                   </div>
@@ -371,7 +371,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== CTA SECTION ===== */}
-      <section className="relative py-24 bg-[#071C36] overflow-hidden">
+      <section className="relative py-16 sm:py-24 bg-[#071C36] overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]">
           <div
             className="absolute inset-0"
@@ -382,32 +382,32 @@ export default function HomePage() {
         </div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[150px]" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-8 lg:px-16 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 text-center">
           <AnimatedSection>
             <h2
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-7"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-8"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Start Importing Today
             </h2>
-            <p className="text-xl text-[#D4AF37] mb-5">
+            <p className="text-base sm:text-xl text-[#D4AF37] mb-4 sm:mb-5">
               Connect with us for premium export solutions
             </p>
-            <p className="text-lg text-white/50 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-lg text-white/50 mb-8 sm:mb-14 max-w-3xl mx-auto leading-[1.7] sm:leading-[1.8]">
               Whether you&apos;re a distributor, wholesaler, or importer — we have the products and
               expertise to help your business grow globally.
             </p>
-            <div className="flex flex-wrap justify-center gap-5">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-5">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
               >
                 Send Inquiry
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 px-10 py-5 border border-white/20 text-white rounded-xl hover:bg-white/5 transition-all duration-500"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base border border-white/20 text-white rounded-xl hover:bg-white/5 transition-all duration-500"
               >
                 Browse Products
               </Link>

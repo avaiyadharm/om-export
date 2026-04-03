@@ -45,7 +45,7 @@ export default function ContactPage() {
   return (
     <div className="pt-20 min-h-screen bg-[#F9F9FF]">
       {/* Hero Header */}
-      <section className="bg-[#071C36] py-24 relative overflow-hidden">
+      <section className="bg-[#071C36] py-14 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]">
           <div
             className="absolute inset-0"
@@ -56,7 +56,7 @@ export default function ContactPage() {
         </div>
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4AF37]/5 rounded-full blur-[120px]" />
 
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20 relative z-10 text-center">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,12 +66,12 @@ export default function ContactPage() {
               Let&apos;s Connect
             </span>
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-5 mb-6"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 sm:mt-5 mb-5 sm:mb-8"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Get in Touch
             </h1>
-            <p className="text-white/50 max-w-2xl mx-auto text-xl leading-relaxed">
+            <p className="text-white/50 max-w-2xl mx-auto text-base sm:text-xl leading-[1.7] sm:leading-[1.8]">
               Connect with our team for export inquiries, partnerships, and product information.
             </p>
           </motion.div>
@@ -79,26 +79,26 @@ export default function ContactPage() {
       </section>
 
       {/* Founders Section */}
-      <section className="py-24">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
-          <AnimatedSection className="text-center mb-14">
+      <section className="py-14 sm:py-24">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+          <AnimatedSection className="text-center mb-8 sm:mb-14">
             <span className="text-[#A48300] text-sm tracking-[0.15em] uppercase font-semibold">
               Our Leadership
             </span>
             <h2
-              className="text-3xl md:text-4xl font-bold text-[#071C36] mt-4"
+              className="text-xl sm:text-3xl md:text-4xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-2"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Meet Our Founders
             </h2>
           </AnimatedSection>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 lg:gap-14 max-w-5xl mx-auto">
             {founders.map((founder) => (
               <StaggerItem key={founder.name}>
-                <div className="bg-white rounded-2xl p-10 text-center group hover:-translate-y-3 transition-all duration-500 hover:shadow-[0_25px_50px_rgba(7,28,54,0.1)]">
-                  <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <span className="text-white text-3xl font-bold" style={{ fontFamily: "Playfair Display, serif" }}>
+                <div className="bg-white rounded-2xl p-6 sm:p-10 text-center group hover:-translate-y-3 transition-all duration-500 hover:shadow-[0_25px_50px_rgba(7,28,54,0.1)]">
+                  <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] mx-auto mb-4 sm:mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-white text-2xl sm:text-3xl font-bold" style={{ fontFamily: "Playfair Display, serif" }}>
                       {founder.name.charAt(0)}
                     </span>
                   </div>
@@ -108,21 +108,21 @@ export default function ContactPage() {
                   >
                     {founder.name}
                   </h3>
-                  <p className="text-sm text-[#A48300] uppercase tracking-wider font-medium mt-2 mb-7">
+                  <p className="text-sm text-[#A48300] uppercase tracking-wider font-medium mt-2 mb-4 sm:mb-7">
                     {founder.title}
                   </p>
 
                   <div className="space-y-5">
                     <a
                       href={`tel:${founder.phone}`}
-                      className="flex items-center justify-center gap-3 text-base text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
+                      className="flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
                     >
                       <Phone className="w-4 h-4 text-[#D4AF37]" />
                       {founder.phone}
                     </a>
                     <a
                       href={`mailto:${founder.email}`}
-                      className="flex items-center justify-center gap-3 text-base text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
+                      className="flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
                     >
                       <Mail className="w-4 h-4 text-[#D4AF37]" />
                       {founder.email}
@@ -136,16 +136,16 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-24 bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
-          <div className="grid lg:grid-cols-5 gap-20">
+      <section className="py-14 sm:py-24 bg-white">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+          <div className="grid lg:grid-cols-5 gap-10 sm:gap-14 lg:gap-20">
             {/* Company Info */}
             <AnimatedSection variant="slideLeft" className="lg:col-span-2">
               <span className="text-[#A48300] text-sm tracking-[0.15em] uppercase font-semibold">
                 Contact Information
               </span>
               <h2
-                className="text-3xl font-bold text-[#071C36] mt-4 mb-12"
+                className="text-2xl sm:text-3xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-8 sm:mb-14"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Let&apos;s Start a
@@ -153,9 +153,9 @@ export default function ContactPage() {
                 Conversation
               </h2>
 
-              <div className="space-y-10 mb-12">
+              <div className="space-y-6 sm:space-y-10 mb-8 sm:mb-12">
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-xl bg-[#F0F3FF] flex items-center justify-center shrink-0">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-[#F0F3FF] flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 text-[#D4AF37]" />
                   </div>
                   <div>
@@ -205,9 +205,9 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <AnimatedSection variant="slideRight" delay={0.2} className="lg:col-span-3">
-              <div className="bg-[#F0F3FF] rounded-2xl p-10 md:p-12">
+              <div className="bg-[#F0F3FF] rounded-2xl p-6 sm:p-10 md:p-12">
                 <h3
-                  className="text-2xl font-bold text-[#071C36] mb-10"
+                  className="text-xl sm:text-2xl font-bold text-[#071C36] mb-6 sm:mb-10"
                   style={{ fontFamily: "Playfair Display, serif" }}
                 >
                   Send a Message
@@ -301,7 +301,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/25 transition-all duration-500 hover:scale-105 disabled:opacity-70 disabled:scale-100"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/25 transition-all duration-500 hover:scale-105 disabled:opacity-70 disabled:scale-100"
                     >
                       {isSubmitting ? (
                         <>
@@ -323,8 +323,8 @@ export default function ContactPage() {
       </section>
 
       {/* Map Placeholder */}
-      <section className="bg-[#F0F3FF] py-20">
-        <div className="w-full max-w-[1600px] mx-auto px-10 lg:px-20">
+      <section className="bg-[#F0F3FF] py-12 sm:py-20">
+        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <AnimatedSection className="text-center">
             <div className="bg-[#DEE8FF] rounded-2xl h-[300px] flex items-center justify-center">
               <div className="text-center">
