@@ -47,12 +47,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 96px;
 }
 
 @media (min-width: 640px) {
   html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 120px;
   }
 }
 
@@ -69,11 +69,18 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-primary);
   background-color: var(--surface-lowest);
-  line-height: 1.85;
-  letter-spacing: 0.015em;
+  font-size: 19px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

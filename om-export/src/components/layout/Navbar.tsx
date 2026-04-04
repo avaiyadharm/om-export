@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -33,33 +34,36 @@ export default function Navbar() {
       }`}
     >
       <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
-        <div className="flex items-center justify-between h-16 sm:h-22">
+        <div className="flex items-center justify-between h-20 sm:h-28">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
-            <motion.div
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-              className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#FFE088] to-[#A48300] flex items-center justify-center shadow-lg shadow-[#D4AF37]/20"
-            >
-              <Globe className="w-4 h-4 sm:w-6 sm:h-6 text-[#241A00]" />
-            </motion.div>
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
+            <div className="relative w-14 h-14 sm:w-20 sm:h-20 shrink-0">
+              <Image
+                src="/om-logo.png"
+                alt="OM Export Logo"
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 56px, 80px"
+                priority
+              />
+            </div>
             <div>
-              <span className="text-lg sm:text-2xl font-bold text-white tracking-tight" style={{ fontFamily: "Playfair Display, serif" }}>
+              <span className="text-2xl sm:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: "Playfair Display, serif" }}>
                 OM EXPORT
               </span>
-              <span className="hidden sm:block text-[11px] text-[#D4AF37] tracking-[0.25em] uppercase font-medium -mt-0.5" style={{ fontFamily: "Manrope, sans-serif" }}>
+              <span className="hidden sm:block text-xs text-[#D4AF37] tracking-[0.25em] uppercase font-medium -mt-0.5" style={{ fontFamily: "Manrope, sans-serif" }}>
                 Global Trade
               </span>
             </div>
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 lg:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-white/80 hover:text-white text-base font-medium transition-colors duration-400 group"
+                className="relative text-white/80 hover:text-white text-lg font-medium transition-colors duration-400 group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D4AF37] group-hover:w-full transition-all duration-300" />
@@ -67,7 +71,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="px-7 py-3 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] text-sm font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/25 transition-all duration-500 hover:scale-105"
+              className="px-8 py-3.5 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] text-base font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/25 transition-all duration-500 hover:scale-105"
             >
               Get Quote
             </Link>
@@ -76,9 +80,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2.5"
           >
-            {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
@@ -104,7 +108,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileOpen(false)}
-                    className="block text-white/80 hover:text-white text-lg font-medium py-2 transition-colors"
+                    className="block text-white/80 hover:text-white text-xl font-medium py-3 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -118,7 +122,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileOpen(false)}
-                  className="block text-center px-6 py-3 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-lg mt-4"
+                  className="block text-center px-6 py-4 bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] text-lg font-semibold rounded-xl mt-4"
                 >
                   Get Quote
                 </Link>

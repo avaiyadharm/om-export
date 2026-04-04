@@ -69,7 +69,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   };
 
   return (
-    <div className="pt-20 min-h-screen bg-[#F9F9FF]">
+    <div className="pt-24 min-h-screen bg-[#F9F9FF]">
       {/* Hero Section */}
       <section className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden">
         <Image
@@ -100,12 +100,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 {product.category}
               </span>
               <h1
-                className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 sm:mt-4 mb-3 sm:mb-5"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 sm:mt-4 mb-3 sm:mb-5"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 {product.name}
               </h1>
-              <p className="text-white/60 text-base sm:text-xl max-w-2xl leading-[1.7] sm:leading-[1.8]">{product.tagline}</p>
+              <p className="text-white/60 text-lg sm:text-xl md:text-2xl max-w-2xl leading-[1.7] sm:leading-[1.8]">{product.tagline}</p>
             </motion.div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               {/* Image Gallery */}
               <AnimatedSection variant="fadeUp">
                 <div className="bg-white rounded-2xl overflow-hidden mb-8">
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
                       src={product.images[activeImage] || product.imageUrl}
                       alt={product.name}
@@ -153,19 +153,19 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               <AnimatedSection variant="fadeUp" delay={0.1}>
                 <div className="mb-14">
                   <h2
-                    className="text-xl sm:text-2xl font-bold text-[#071C36] mb-4 sm:mb-5"
+                    className="text-2xl sm:text-3xl font-bold text-[#071C36] mb-4 sm:mb-5"
                     style={{ fontFamily: "Playfair Display, serif" }}
                   >
                     About This Product
                   </h2>
-                  <p className="text-[#6B7280] text-lg leading-[1.8]">{product.description}</p>
+                  <p className="text-[#6B7280] text-lg sm:text-xl leading-[1.8]">{product.description}</p>
                 </div>
               </AnimatedSection>
 
               {/* Specifications */}
               <AnimatedSection variant="fadeUp" delay={0.2}>
                 <h2
-                  className="text-2xl font-bold text-[#071C36] mb-8"
+                  className="text-2xl sm:text-3xl font-bold text-[#071C36] mb-8"
                   style={{ fontFamily: "Playfair Display, serif" }}
                 >
                   Specifications
@@ -173,23 +173,23 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 <div className="bg-white rounded-2xl p-5 sm:p-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
                     <div className="flex justify-between py-4 border-b border-[#F0F3FF]">
-                      <span className="text-sm text-[#6B7280] uppercase tracking-wider">Origin</span>
-                      <span className="text-base font-semibold text-[#071C36]">{product.origin}</span>
+                      <span className="text-base text-[#6B7280] uppercase tracking-wider">Origin</span>
+                      <span className="text-lg font-semibold text-[#071C36]">{product.origin}</span>
                     </div>
                     <div className="flex justify-between py-4 border-b border-[#F0F3FF]">
-                      <span className="text-sm text-[#6B7280] uppercase tracking-wider">MOQ</span>
-                      <span className="text-base font-semibold text-[#071C36]">
+                      <span className="text-base text-[#6B7280] uppercase tracking-wider">MOQ</span>
+                      <span className="text-lg font-semibold text-[#071C36]">
                         {product.moq} {product.moqUnit}
                       </span>
                     </div>
                     <div className="flex justify-between py-4 border-b border-[#F0F3FF]">
-                      <span className="text-sm text-[#6B7280] uppercase tracking-wider">Packaging</span>
-                      <span className="text-base font-semibold text-[#071C36]">{product.packaging}</span>
+                      <span className="text-base text-[#6B7280] uppercase tracking-wider">Packaging</span>
+                      <span className="text-lg font-semibold text-[#071C36]">{product.packaging}</span>
                     </div>
                     {Object.entries(product.specifications).map(([key, value]) => (
                       <div key={key} className="flex justify-between py-4 border-b border-[#F0F3FF]">
-                        <span className="text-sm text-[#6B7280] uppercase tracking-wider">{key}</span>
-                        <span className="text-base font-semibold text-[#071C36]">{value}</span>
+                        <span className="text-base text-[#6B7280] uppercase tracking-wider">{key}</span>
+                        <span className="text-lg font-semibold text-[#071C36]">{value}</span>
                       </div>
                     ))}
                   </div>
@@ -200,18 +200,18 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             {/* Right: Inquiry Form */}
             <div className="lg:col-span-2">
               <AnimatedSection variant="slideRight" delay={0.3}>
-                <div className="sticky top-28">
+                <div className="sticky top-32">
                   <div className="bg-[#F0F3FF] rounded-2xl p-5 sm:p-10">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-1.5 h-7 bg-gradient-to-b from-[#FFE088] to-[#D4AF37] rounded-full" />
                       <h2
-                        className="text-xl font-bold text-[#071C36]"
+                        className="text-2xl font-bold text-[#071C36]"
                         style={{ fontFamily: "Playfair Display, serif" }}
                       >
                         Send Inquiry
                       </h2>
                     </div>
-                    <p className="text-base text-[#6B7280] mb-10 ml-5">
+                    <p className="text-lg text-[#6B7280] mb-10 ml-5">
                       Interested in this product? Get a quote today.
                     </p>
 
@@ -348,7 +348,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
           <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
             <AnimatedSection>
               <h2
-                className="text-3xl font-bold text-[#071C36] mb-10"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#071C36] mb-10 text-center"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Related Products
@@ -366,7 +366,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 >
                   <Link href={`/products/${rp.id}`}>
                     <div className="group bg-[#F9F9FF] rounded-2xl overflow-hidden hover:-translate-y-3 transition-all duration-500 hover:shadow-[0_25px_50px_rgba(7,28,54,0.1)]">
-                      <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="relative aspect-[3/2] overflow-hidden">
                         <Image
                           src={rp.imageUrl}
                           alt={rp.name}
@@ -376,7 +376,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                         />
                       </div>
                       <div className="p-4 sm:p-6">
-                        <h3 className="text-sm sm:text-base font-bold text-[#071C36] group-hover:text-[#A48300] transition-colors duration-400">
+                        <h3 className="text-base sm:text-lg font-bold text-[#071C36] group-hover:text-[#A48300] transition-colors duration-400">
                           {rp.name}
                         </h3>
                         <span className="text-sm text-[#6B7280] mt-2 inline-flex items-center gap-1">

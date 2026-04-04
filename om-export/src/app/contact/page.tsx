@@ -43,7 +43,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-20 min-h-screen bg-[#F9F9FF]">
+    <div className="pt-24 min-h-screen bg-[#F9F9FF]">
       {/* Hero Header */}
       <section className="bg-[#071C36] py-14 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]">
@@ -66,12 +66,12 @@ export default function ContactPage() {
               Let&apos;s Connect
             </span>
             <h1
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 sm:mt-5 mb-5 sm:mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 sm:mt-5 mb-5 sm:mb-8"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Get in Touch
             </h1>
-            <p className="text-white/50 max-w-2xl mx-auto text-base sm:text-xl leading-[1.7] sm:leading-[1.8]">
+            <p className="text-white/50 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl leading-[1.7] sm:leading-[1.8]">
               Connect with our team for export inquiries, partnerships, and product information.
             </p>
           </motion.div>
@@ -86,11 +86,11 @@ export default function ContactPage() {
               Our Leadership
             </span>
             <h2
-              className="text-xl sm:text-3xl md:text-4xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-2"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-2"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Meet Our Founders
-            </h2>
+            </h2><br />
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 lg:gap-14 max-w-5xl mx-auto">
@@ -103,26 +103,26 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <h3
-                    className="text-lg font-bold text-[#071C36]"
+                    className="text-xl sm:text-2xl font-bold text-[#071C36]"
                     style={{ fontFamily: "Manrope, sans-serif" }}
                   >
                     {founder.name}
                   </h3>
-                  <p className="text-sm text-[#A48300] uppercase tracking-wider font-medium mt-2 mb-4 sm:mb-7">
+                  <p className="text-base text-[#A48300] uppercase tracking-wider font-medium mt-2 mb-4 sm:mb-7">
                     {founder.title}
                   </p>
 
                   <div className="space-y-5">
                     <a
                       href={`tel:${founder.phone}`}
-                      className="flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
+                      className="flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
                     >
                       <Phone className="w-4 h-4 text-[#D4AF37]" />
                       {founder.phone}
                     </a>
                     <a
                       href={`mailto:${founder.email}`}
-                      className="flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
+                      className="flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg text-[#6B7280] hover:text-[#071C36] transition-colors duration-400"
                     >
                       <Mail className="w-4 h-4 text-[#D4AF37]" />
                       {founder.email}
@@ -145,7 +145,7 @@ export default function ContactPage() {
                 Contact Information
               </span>
               <h2
-                className="text-2xl sm:text-3xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-8 sm:mb-14"
+                className="text-3xl sm:text-4xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-8 sm:mb-14"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Let&apos;s Start a
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     <p className="text-sm text-[#6B7280] uppercase tracking-wider mb-2">Email</p>
                     <a
                       href="mailto:omexport291@gmail.com"
-                      className="text-lg text-[#071C36] font-medium hover:text-[#A48300] transition-colors duration-400"
+                      className="text-xl text-[#071C36] font-medium hover:text-[#A48300] transition-colors duration-400"
                     >
                       {companyInfo.email}
                     </a>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-[#6B7280] uppercase tracking-wider mb-2">Phone</p>
-                    <p className="text-lg text-[#071C36] font-medium">+91 98765 43210</p>
+                    <p className="text-xl text-[#071C36] font-medium">+91 99253 53952</p>
                   </div>
                 </div>
 
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-[#6B7280] uppercase tracking-wider mb-2">Location</p>
-                    <p className="text-lg text-[#071C36] font-medium">Gujarat, India</p>
+                    <p className="text-xl text-[#071C36] font-medium">Gujarat, India</p>
                   </div>
                 </div>
 
@@ -197,7 +197,7 @@ export default function ContactPage() {
                     <p className="text-sm text-[#6B7280] uppercase tracking-wider mb-2">
                       Business Hours
                     </p>
-                    <p className="text-lg text-[#071C36] font-medium">Mon – Sat, 9:00 AM – 6:00 PM IST</p>
+                    <p className="text-xl text-[#071C36] font-medium">Mon – Sat, 9:00 AM – 6:00 PM IST</p>
                   </div>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
             <AnimatedSection variant="slideRight" delay={0.2} className="lg:col-span-3">
               <div className="bg-[#F0F3FF] rounded-2xl p-6 sm:p-10 md:p-12">
                 <h3
-                  className="text-xl sm:text-2xl font-bold text-[#071C36] mb-6 sm:mb-10"
+                  className="text-2xl sm:text-3xl font-bold text-[#071C36] mb-6 sm:mb-10"
                   style={{ fontFamily: "Playfair Display, serif" }}
                 >
                   Send a Message

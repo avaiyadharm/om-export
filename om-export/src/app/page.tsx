@@ -45,7 +45,7 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5 sm:mb-8"
               >
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
-                <span className="text-white/70 text-xs sm:text-sm tracking-wider uppercase font-medium">
+                <span className="text-white/70 text-sm sm:text-base tracking-wider uppercase font-medium">
                   Trusted by 1000+ buyers worldwide
                 </span>
               </motion.div>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-[1.15] mb-6 sm:mb-12"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-[1.1] mb-6 sm:mb-12"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Global Export
@@ -68,7 +68,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5 }}
-                className="text-base sm:text-xl text-white/60 max-w-2xl leading-[1.7] sm:leading-[1.8] mb-8 sm:mb-14"
+                className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl leading-[1.7] sm:leading-[1.8] mb-8 sm:mb-14"
               >
                 Connecting businesses worldwide with premium Indian exports across{" "}
                 <span className="text-[#D4AF37] font-medium">50+ countries</span>. Your trusted
@@ -83,14 +83,14 @@ export default function HomePage() {
               >
                 <Link
                   href="/products"
-                  className="group inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
+                  className="group inline-flex items-center gap-2 sm:gap-3 px-7 sm:px-10 py-4 sm:py-5 text-base sm:text-lg bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
                 >
                   Explore Products
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base border border-white/20 text-white font-medium rounded-xl hover:bg-white/5 transition-all duration-500"
+                  className="inline-flex items-center gap-2 sm:gap-3 px-7 sm:px-10 py-4 sm:py-5 text-base sm:text-lg border border-white/20 text-white font-medium rounded-xl hover:bg-white/5 transition-all duration-500"
                 >
                   Contact Us
                 </Link>
@@ -111,7 +111,7 @@ export default function HomePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 + i * 0.15 }}
                   className={`relative rounded-2xl overflow-hidden ${
-                    i === 0 || i === 3 ? "aspect-[4/5]" : "aspect-square"
+                    i === 0 || i === 3 ? "aspect-[3/4]" : "aspect-[4/5]"
                   }`}
                 >
                   <Image
@@ -126,7 +126,7 @@ export default function HomePage() {
                     <span className="text-xs text-[#D4AF37] uppercase tracking-wider font-medium">
                       {p.category}
                     </span>
-                    <p className="text-white text-base font-semibold mt-1">{p.name}</p>
+                    <p className="text-white text-base font-bold mt-1">{p.name}</p>
                   </div>
                 </motion.div>
               ))}
@@ -168,10 +168,10 @@ export default function HomePage() {
                     <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37]" />
                   </div>
                   <div>
-                    <p className="text-xl sm:text-3xl font-bold text-white" style={{ fontFamily: "Playfair Display, serif" }}>
+                    <p className="text-2xl sm:text-4xl font-bold text-white" style={{ fontFamily: "Playfair Display, serif" }}>
                       {stat.value}
                     </p>
-                    <p className="text-white/40 text-[10px] sm:text-sm uppercase tracking-wider mt-0.5 sm:mt-1">{stat.label}</p>
+                    <p className="text-white/40 text-xs sm:text-base uppercase tracking-wider mt-0.5 sm:mt-1">{stat.label}</p>
                   </div>
                 </div>
               </StaggerItem>
@@ -184,16 +184,16 @@ export default function HomePage() {
       <section className="py-16 sm:py-32 bg-[#F0F3FF]">
         <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <AnimatedSection className="text-center mb-10 sm:mb-20">
-            <span className="text-[#A48300] text-sm tracking-[0.15em] uppercase font-semibold">
+            <span className="text-[#A48300] text-base tracking-[0.15em] uppercase font-semibold">
               What We Export
             </span>
             <h2
-              className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-4 sm:mb-6"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Our Export Categories
             </h2>
-            <p className="text-[#6B7280] text-sm sm:text-lg max-w-3xl mx-auto leading-[1.7] sm:leading-[1.8]">
+            <p className="text-[#6B7280] text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-[1.7] sm:leading-[1.8]">
               From farm produce to fine jewellery, we export a diverse range of premium Indian
               products to markets worldwide.
             </p>
@@ -208,12 +208,12 @@ export default function HomePage() {
                       {cat.icon}
                     </div>
                     <h3
-                      className="text-sm sm:text-base font-semibold text-[#071C36] mb-1 sm:mb-2"
+                      className="text-base sm:text-lg font-semibold text-[#071C36] mb-1 sm:mb-2"
                       style={{ fontFamily: "Manrope, sans-serif" }}
                     >
                       {cat.name}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#6B7280]">{cat.productCount} products</p>
+                    <p className="text-sm sm:text-base text-[#6B7280]">{cat.productCount} products</p>
                     <div className="w-8 h-0.5 bg-[#D4AF37] mx-auto mt-3 sm:mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
                   </div>
                 </Link>
@@ -226,21 +226,22 @@ export default function HomePage() {
       {/* ===== FEATURED PRODUCTS ===== */}
       <section className="py-16 sm:py-32 bg-white">
         <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
-          <AnimatedSection className="flex items-end justify-between mb-8 sm:mb-16">
-            <div>
-              <span className="text-[#A48300] text-sm tracking-[0.15em] uppercase font-semibold">
-                Curated Selection
-              </span>
-              <h2
-                className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#071C36] mt-3 sm:mt-5"
-                style={{ fontFamily: "Playfair Display, serif" }}
-              >
-                Featured Products
-              </h2>
-            </div>
+          <AnimatedSection className="text-center mb-8 sm:mb-16">
+            <span className="text-[#A48300] text-base tracking-[0.15em] uppercase font-semibold">
+              Curated Selection
+            </span>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-3"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              Featured Products
+            </h2>
+            <p className="text-[#6B7280] text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+              Our most popular exports, trusted by buyers across 50+ countries
+            </p>
             <Link
               href="/products"
-              className="hidden md:inline-flex items-center gap-1 text-[#A48300] font-medium text-sm hover:gap-2 transition-all"
+              className="hidden md:inline-flex items-center gap-1 text-[#A48300] font-medium text-base hover:gap-2 transition-all mt-4"
             >
               View All <ChevronRight className="w-4 h-4" />
             </Link>
@@ -251,7 +252,7 @@ export default function HomePage() {
               <StaggerItem key={product.id}>
                 <Link href={`/products/${product.id}`}>
                   <div className="group bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_35px_70px_rgba(7,28,54,0.12)]">
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-[3/2] overflow-hidden">
                       <Image
                         src={product.imageUrl}
                         alt={product.name}
@@ -268,19 +269,19 @@ export default function HomePage() {
                     </div>
                     <div className="p-5 sm:p-7 lg:p-8">
                       <h3
-                        className="text-lg sm:text-xl font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400"
+                        className="text-xl sm:text-2xl font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400"
                         style={{ fontFamily: "Manrope, sans-serif" }}
                       >
                         {product.name}
                       </h3>
-                      <p className="text-sm sm:text-base text-[#6B7280] line-clamp-2 mb-4 sm:mb-5 leading-[1.7]">
+                      <p className="text-base sm:text-lg text-[#6B7280] line-clamp-2 mb-4 sm:mb-5 leading-[1.7]">
                         {product.description}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-[#6B7280]">
+                        <span className="text-base text-[#6B7280]">
                           MOQ: {product.moq} {product.moqUnit}
                         </span>
-                        <span className="text-[#A48300] text-base font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                        <span className="text-[#A48300] text-lg font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                           Details <ArrowRight className="w-4 h-4" />
                         </span>
                       </div>
@@ -307,16 +308,16 @@ export default function HomePage() {
         <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center">
             <AnimatedSection variant="slideLeft">
-              <span className="text-[#A48300] text-xs tracking-[0.15em] uppercase font-semibold">
+              <span className="text-[#A48300] text-sm sm:text-base tracking-[0.15em] uppercase font-semibold">
                 About OM Export
               </span>
               <h2
-                className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-6 sm:mb-10"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#071C36] mt-3 sm:mt-5 mb-6 sm:mb-10"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
                 Your Trusted Partner in Global Trade
               </h2>
-              <p className="text-base sm:text-lg text-[#6B7280] leading-[1.7] sm:leading-[1.8] mb-8 sm:mb-12">{companyInfo.description}</p>
+              <p className="text-lg sm:text-xl text-[#6B7280] leading-[1.7] sm:leading-[1.8] mb-8 sm:mb-12">{companyInfo.description}</p>
               <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:gap-6">
                 {[
                   { value: "50+", label: "Countries" },
@@ -326,12 +327,12 @@ export default function HomePage() {
                 ].map((stat) => (
                   <div key={stat.label} className="bg-white rounded-xl p-4 sm:p-6">
                     <p
-                      className="text-2xl sm:text-3xl font-bold text-[#A48300]"
+                      className="text-3xl sm:text-4xl font-bold text-[#A48300]"
                       style={{ fontFamily: "Playfair Display, serif" }}
                     >
                       {stat.value}
                     </p>
-                    <p className="text-sm text-[#6B7280] uppercase tracking-wider mt-2">
+                    <p className="text-sm sm:text-base text-[#6B7280] uppercase tracking-wider mt-2">
                       {stat.label}
                     </p>
                   </div>
@@ -354,12 +355,12 @@ export default function HomePage() {
                       </span>
                     </div>
                     <h3
-                      className="text-sm sm:text-base font-bold text-[#071C36] leading-snug"
+                      className="text-base sm:text-lg font-bold text-[#071C36] leading-snug"
                       style={{ fontFamily: "Manrope, sans-serif" }}
                     >
                       {founder.name}
                     </h3>
-                    <p className="text-[10px] sm:text-xs text-[#6B7280] uppercase tracking-wider mt-1.5 sm:mt-2">
+                    <p className="text-xs sm:text-sm text-[#6B7280] uppercase tracking-wider mt-1.5 sm:mt-2">
                       {founder.title}
                     </p>
                   </div>
@@ -385,29 +386,29 @@ export default function HomePage() {
         <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 text-center">
           <AnimatedSection>
             <h2
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-8"
               style={{ fontFamily: "Playfair Display, serif" }}
             >
               Start Importing Today
             </h2>
-            <p className="text-base sm:text-xl text-[#D4AF37] mb-4 sm:mb-5">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#D4AF37] mb-4 sm:mb-5">
               Connect with us for premium export solutions
             </p>
-            <p className="text-sm sm:text-lg text-white/50 mb-8 sm:mb-14 max-w-3xl mx-auto leading-[1.7] sm:leading-[1.8]">
+            <p className="text-base sm:text-lg md:text-xl text-white/50 mb-8 sm:mb-14 max-w-3xl mx-auto leading-[1.7] sm:leading-[1.8]">
               Whether you&apos;re a distributor, wholesaler, or importer — we have the products and
               expertise to help your business grow globally.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-5">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
+                className="group inline-flex items-center justify-center gap-2 px-7 sm:px-10 py-4 sm:py-5 text-base sm:text-lg bg-gradient-to-r from-[#FFE088] to-[#D4AF37] text-[#241A00] font-semibold rounded-xl hover:shadow-xl hover:shadow-[#D4AF37]/20 transition-all duration-500 hover:scale-105"
               >
                 Send Inquiry
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3.5 sm:py-5 text-sm sm:text-base border border-white/20 text-white rounded-xl hover:bg-white/5 transition-all duration-500"
+                className="inline-flex items-center justify-center gap-2 px-7 sm:px-10 py-4 sm:py-5 text-base sm:text-lg border border-white/20 text-white rounded-xl hover:bg-white/5 transition-all duration-500"
               >
                 Browse Products
               </Link>
