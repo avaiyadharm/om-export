@@ -110,15 +110,13 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 + i * 0.15 }}
-                  className={`relative rounded-2xl overflow-hidden ${
-                    i === 0 || i === 3 ? "aspect-[3/4]" : "aspect-[4/5]"
-                  }`}
+                  className="relative rounded-2xl overflow-hidden aspect-square bg-white/5"
                 >
                   <Image
                     src={p.imageUrl}
                     alt={p.name}
                     fill
-                    className="object-cover"
+                    className={p.imageUrl.includes('.png') ? "object-contain bg-white/10 p-6" : "object-cover"}
                     sizes="300px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#071C36]/60 to-transparent" />
@@ -257,7 +255,7 @@ export default function HomePage() {
                         src={product.imageUrl}
                         alt={product.name}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className={`group-hover:scale-105 transition-transform duration-700 ease-out ${product.imageUrl.includes('.png') ? 'object-contain bg-[#F8F9FA] p-6' : 'object-cover'}`}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#071C36]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
