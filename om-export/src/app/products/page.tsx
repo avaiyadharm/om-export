@@ -48,7 +48,7 @@ export default function ProductsPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: "Playfair Display, serif" }}>
               Our Export Products
             </h1>
-            <p className="text-white/50 text-lg sm:text-xl md:text-2xl max-w-2xl leading-[1.7] sm:leading-[1.8]">
+            <p className="text-white/60 text-xl sm:text-2xl md:text-3xl max-w-2xl leading-[1.7] sm:leading-[1.8]">
             <br />
               Browse through our premium export catalog of Indian products across diverse categories.
             </p>
@@ -61,14 +61,14 @@ export default function ProductsPage() {
         <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
             {/* Search */}
-            <div className="relative flex-1 max-w-lg group/search">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#9CA3AF] group-focus-within/search:text-[#D4AF37] transition-colors duration-300" />
+            <div className="relative flex-1 max-w-xl group/search">
+              <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6 text-[#9CA3AF] group-focus-within/search:text-[#D4AF37] transition-colors duration-300" />
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-5 py-4 bg-[#F0F3FF] rounded-xl text-lg text-[#071C36] placeholder-[#9CA3AF] outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:bg-white transition-all duration-300"
+                className="w-full pl-14 pr-6 py-5 bg-[#F0F3FF] rounded-2xl text-xl text-[#071C36] placeholder-[#9CA3AF] outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:bg-white transition-all duration-300"
               />
             </div>
 
@@ -77,7 +77,7 @@ export default function ProductsPage() {
               <SlidersHorizontal className="w-4 h-4 text-[#6B7280] shrink-0 hidden md:block" />
               <button
                 onClick={() => setActiveCategory("all")}
-                className={`shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 ${
+                className={`shrink-0 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 ${
                   activeCategory === "all"
                     ? "bg-[#071C36] text-white shadow-lg shadow-[#071C36]/20"
                     : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#DEE8FF] hover:text-[#071C36]"
@@ -89,7 +89,7 @@ export default function ProductsPage() {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 ${
+                  className={`shrink-0 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 ${
                     activeCategory === cat.id
                       ? "bg-[#071C36] text-white shadow-lg shadow-[#071C36]/20"
                       : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#DEE8FF] hover:text-[#071C36]"
@@ -107,7 +107,7 @@ export default function ProductsPage() {
       <section className="py-6 sm:py-12">
         <div className="w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <AnimatedSection>
-            <p className="text-sm text-[#6B7280] mb-5">
+            <p className="text-base text-[#6B7280] mb-5">
               Showing <span className="font-semibold text-[#071C36]">{filteredProducts.length}</span> product{filteredProducts.length !== 1 ? "s" : ""}
               {activeCategory !== "all" && (
                 <span> in <span className="text-[#A48300] font-medium">{categories.find((c) => c.id === activeCategory)?.name}</span></span>
@@ -145,13 +145,13 @@ export default function ProductsPage() {
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="text-base font-bold text-[#071C36] mb-1 leading-snug" style={{ fontFamily: "Manrope, sans-serif" }}>
+                        <h3 className="text-lg font-bold text-[#071C36] mb-1 leading-snug" style={{ fontFamily: "Manrope, sans-serif" }}>
                           {product.name}
                         </h3>
-                        <p className="text-xs text-[#A48300] font-semibold uppercase tracking-wide mb-2">
+                        <p className="text-sm text-[#A48300] font-semibold uppercase tracking-wide mb-2">
                           {product.tagline}
                         </p>
-                        <p className="text-sm text-[#6B7280] line-clamp-2 leading-relaxed">
+                        <p className="text-base text-[#6B7280] line-clamp-2 leading-relaxed">
                           {product.description}
                         </p>
                       </div>
@@ -167,22 +167,22 @@ export default function ProductsPage() {
                           sizes="(max-width: 1024px) 33vw, 20vw"
                         />
                         <div className="absolute top-2 left-2">
-                          <span className="px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-semibold text-[#071C36]">
+                          <span className="px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#071C36]">
                             {product.category}
                           </span>
                         </div>
                       </div>
-                      <div className="p-3 flex flex-col flex-1">
-                        <h3 className="text-xs sm:text-sm font-bold text-[#071C36] mb-0.5 line-clamp-2 leading-snug group-hover:text-[#A48300] transition-colors" style={{ fontFamily: "Manrope, sans-serif" }}>
+                      <div className="p-4 flex flex-col flex-1">
+                        <h3 className="text-sm sm:text-base font-bold text-[#071C36] mb-0.5 line-clamp-2 leading-snug group-hover:text-[#A48300] transition-colors" style={{ fontFamily: "Manrope, sans-serif" }}>
                           {product.name}
                         </h3>
-                        <p className="text-[10px] text-[#A48300] font-semibold uppercase tracking-wide truncate mb-auto">
+                        <p className="text-xs text-[#A48300] font-semibold uppercase tracking-wide truncate mb-auto">
                           {product.tagline}
                         </p>
                         <div className="flex items-center justify-between border-t border-[#F0F3FF] mt-2 pt-2">
-                          <span className="text-[10px] text-[#9CA3AF]">MOQ: {product.moq} {product.moqUnit}</span>
-                          <span className="text-[#A48300] text-[10px] font-bold inline-flex items-center gap-0.5 group-hover:gap-1.5 transition-all">
-                            View <ArrowRight className="w-2.5 h-2.5" />
+                          <span className="text-xs text-[#9CA3AF]">MOQ: {product.moq} {product.moqUnit}</span>
+                          <span className="text-[#A48300] text-xs font-bold inline-flex items-center gap-0.5 group-hover:gap-1.5 transition-all">
+                            View <ArrowRight className="w-3 h-3" />
                           </span>
                         </div>
                       </div>

@@ -37,21 +37,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 sm:h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
-            <div className="relative w-14 h-14 sm:w-20 sm:h-20 shrink-0">
+            <div className="relative w-16 h-16 sm:w-24 sm:h-24 shrink-0">
               <Image
                 src="/om-logo.png"
                 alt="OM Export Logo"
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 56px, 80px"
+                sizes="(max-width: 640px) 64px, 96px"
                 priority
               />
             </div>
             <div>
-              <span className="text-2xl sm:text-3xl font-bold text-white tracking-tight" style={{ fontFamily: "Playfair Display, serif" }}>
+              <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight" style={{ fontFamily: "Playfair Display, serif" }}>
                 OM EXPORT
               </span>
-              <span className="hidden sm:block text-xs text-[#D4AF37] tracking-[0.25em] uppercase font-medium -mt-0.5" style={{ fontFamily: "Manrope, sans-serif" }}>
+              <span className="hidden sm:block text-sm text-[#D4AF37] tracking-[0.25em] uppercase font-medium -mt-0.5" style={{ fontFamily: "Manrope, sans-serif" }}>
                 Global Trade
               </span>
             </div>
