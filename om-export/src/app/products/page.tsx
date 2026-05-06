@@ -104,19 +104,13 @@ export default function ProductsPage() {
       </section>
 
       {/* Product Grid */}
-      <section className="py-8 sm:py-14">
-        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+      <section className="py-6 sm:py-12">
+        <div className="w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <AnimatedSection>
-            <p className="text-lg text-[#6B7280] mb-10">
-              Showing <span className="font-semibold text-[#071C36]">{filteredProducts.length}</span>{" "}
-              product{filteredProducts.length !== 1 ? "s" : ""}<br /><br />
+            <p className="text-sm text-[#6B7280] mb-5">
+              Showing <span className="font-semibold text-[#071C36]">{filteredProducts.length}</span> product{filteredProducts.length !== 1 ? "s" : ""}
               {activeCategory !== "all" && (
-                <span>
-                  {" "}in{" "}
-                  <span className="text-[#A48300] font-medium">
-                    {categories.find((c) => c.id === activeCategory)?.name}
-                  </span>
-                </span>
+                <span> in <span className="text-[#A48300] font-medium">{categories.find((c) => c.id === activeCategory)?.name}</span></span>
               )}
             </p>
           </AnimatedSection>
@@ -128,48 +122,67 @@ export default function ProductsPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
+              className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5"
             >
               {filteredProducts.map((product, i) => (
                 <motion.div
                   key={product.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08, duration: 0.4 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: Math.min(i * 0.04, 0.3), duration: 0.3 }}
+                  className="flex justify-center sm:block"
                 >
-                  <Link href={`/products/${product.id}`}>
-                    <div className="group bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_35px_70px_rgba(7,28,54,0.12)]">
-                      <div className="relative aspect-[2/1] overflow-hidden bg-[#F0F3FF]">
+                  <Link href={`/products/${product.id}`} className="block w-[80%] sm:w-full">
+                    {/* Mobile: image + text below */}
+                    <div className="group sm:hidden bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 mb-5">
+                      <div className="relative w-full aspect-[3/4] overflow-hidden bg-[#F5F7FF]">
                         <Image
                           src={product.imageUrl}
                           alt={product.name}
                           fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className={`transition-transform duration-500 group-hover:scale-105 ${product.imageUrl.includes(".png") ? "object-contain p-4" : "object-cover"}`}
+                          sizes="80vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#071C36]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="absolute top-4 left-4">
-                          <span className="px-4 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-sm font-semibold text-[#071C36]">
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-base font-bold text-[#071C36] mb-1 leading-snug" style={{ fontFamily: "Manrope, sans-serif" }}>
+                          {product.name}
+                        </h3>
+                        <p className="text-xs text-[#A48300] font-semibold uppercase tracking-wide mb-2">
+                          {product.tagline}
+                        </p>
+                        <p className="text-sm text-[#6B7280] line-clamp-2 leading-relaxed">
+                          {product.description}
+                        </p>
+                      </div>
+                    </div>
+                    {/* Desktop: full card */}
+                    <div className="group hidden sm:flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+                      <div className="relative aspect-square overflow-hidden bg-[#F5F7FF]">
+                        <Image
+                          src={product.imageUrl}
+                          alt={product.name}
+                          fill
+                          className={`transition-transform duration-500 group-hover:scale-105 ${product.imageUrl.includes(".png") ? "object-contain p-4" : "object-cover"}`}
+                          sizes="(max-width: 1024px) 33vw, 20vw"
+                        />
+                        <div className="absolute top-2 left-2">
+                          <span className="px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-semibold text-[#071C36]">
                             {product.category}
                           </span>
                         </div>
                       </div>
-                      <div className="p-6 sm:p-8 lg:p-9">
-                        <h3 className="text-2xl sm:text-[1.65rem] font-bold text-[#071C36] mb-2 group-hover:text-[#A48300] transition-colors duration-400" style={{ fontFamily: "Manrope, sans-serif" }}>
+                      <div className="p-3 flex flex-col flex-1">
+                        <h3 className="text-xs sm:text-sm font-bold text-[#071C36] mb-0.5 line-clamp-2 leading-snug group-hover:text-[#A48300] transition-colors" style={{ fontFamily: "Manrope, sans-serif" }}>
                           {product.name}
                         </h3>
-                        <p className="text-base sm:text-lg text-[#A48300] uppercase tracking-wider font-medium mb-3">
+                        <p className="text-[10px] text-[#A48300] font-semibold uppercase tracking-wide truncate mb-auto">
                           {product.tagline}
                         </p>
-                        <p className="text-lg sm:text-xl text-[#6B7280] line-clamp-2 mb-5 sm:mb-6 leading-[1.7]">
-                          {product.description}
-                        </p>
-                        <div className="flex items-center justify-between pt-5 border-t border-[#F0F3FF]">
-                          <span className="text-base sm:text-lg text-[#6B7280]">
-                            MOQ: {product.moq} {product.moqUnit}
-                          </span>
-                          <span className="text-[#A48300] text-lg sm:text-xl font-semibold inline-flex items-center gap-1 group-hover:gap-3 transition-all">
-                            View Details <ArrowRight className="w-5 h-5" />
+                        <div className="flex items-center justify-between border-t border-[#F0F3FF] mt-2 pt-2">
+                          <span className="text-[10px] text-[#9CA3AF]">MOQ: {product.moq} {product.moqUnit}</span>
+                          <span className="text-[#A48300] text-[10px] font-bold inline-flex items-center gap-0.5 group-hover:gap-1.5 transition-all">
+                            View <ArrowRight className="w-2.5 h-2.5" />
                           </span>
                         </div>
                       </div>
@@ -181,15 +194,9 @@ export default function ProductsPage() {
           </AnimatePresence>
 
           {filteredProducts.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-20"
-            >
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-bold text-[#071C36] mb-2" style={{ fontFamily: "Playfair Display, serif" }}>
-                No products found
-              </h3>
+              <h3 className="text-xl font-bold text-[#071C36] mb-2" style={{ fontFamily: "Playfair Display, serif" }}>No products found</h3>
               <p className="text-[#6B7280]">Try adjusting your search or category filter.</p>
             </motion.div>
           )}
