@@ -5,8 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { Search, ArrowRight, SlidersHorizontal } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedSection, { StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 import { products, categories } from "@/lib/data";
+
+// Pastel background palette — cycles per card index (inspired by makinofoods.in)
+const PASTEL_BG = [
+  "#FEF9C3", // light yellow
+  "#CEFAFE", // light blue
+  "#ECFCCA", // mint green
+  "#FAE8FF", // light purple
+  "#FFE4E6", // light pink
+  "#FEF3C7", // amber tint
+  "#DBEAFE", // sky blue
+  "#D1FAE5", // emerald tint
+];
 
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -17,7 +29,8 @@ export default function ProductsPage() {
       const matchSearch =
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.description.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchCategory = activeCategory === "all" || p.categoryId === activeCategory;
+      const matchCategory =
+        activeCategory === "all" || p.categoryId === activeCategory;
       return matchSearch && matchCategory;
     });
   }, [searchQuery, activeCategory]);
@@ -41,16 +54,21 @@ export default function ProductsPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-2 text-white/40 text-base mb-4">
-              <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
+              <Link href="/" className="hover:text-[#D4AF37] transition-colors">
+                Home
+              </Link>
               <span>/</span>
               <span className="text-white/70">Products</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: "Playfair Display, serif" }}>
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
               Our Export Products
             </h1>
             <p className="text-white/60 text-xl sm:text-2xl md:text-3xl max-w-2xl leading-[1.7] sm:leading-[1.8]">
-            <br />
-              Browse through our premium export catalog of Indian products across diverse categories.
+              Browse through our premium export catalog of Indian products
+              across diverse categories.
             </p>
           </motion.div>
         </div>
@@ -107,10 +125,20 @@ export default function ProductsPage() {
       <section className="py-6 sm:py-12">
         <div className="w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
           <AnimatedSection>
-            <p className="text-base text-[#6B7280] mb-5">
-              Showing <span className="font-semibold text-[#071C36]">{filteredProducts.length}</span> product{filteredProducts.length !== 1 ? "s" : ""}
+            <p className="text-base text-[#6B7280] mb-6">
+              Showing{" "}
+              <span className="font-semibold text-[#071C36]">
+                {filteredProducts.length}
+              </span>{" "}
+              product{filteredProducts.length !== 1 ? "s" : ""}
               {activeCategory !== "all" && (
-                <span> in <span className="text-[#A48300] font-medium">{categories.find((c) => c.id === activeCategory)?.name}</span></span>
+                <span>
+                  {" "}
+                  in{" "}
+                  <span className="text-[#A48300] font-medium">
+                    {categories.find((c) => c.id === activeCategory)?.name}
+                  </span>
+                </span>
               )}
             </p>
           </AnimatedSection>
@@ -122,7 +150,7 @@ export default function ProductsPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5"
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
             >
               {filteredProducts.map((product, i) => (
                 <motion.div
@@ -130,60 +158,86 @@ export default function ProductsPage() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: Math.min(i * 0.04, 0.3), duration: 0.3 }}
-                  className="flex justify-center sm:block"
+                  className="h-full"
                 >
-                  <Link href={`/products/${product.id}`} className="block w-[80%] sm:w-full">
-                    {/* Mobile: image + text below */}
-                    <div className="group sm:hidden bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 mb-5">
-                      <div className="relative w-full aspect-[3/4] overflow-hidden bg-[#F5F7FF]">
-                        <Image
-                          src={product.imageUrl}
-                          alt={product.name}
-                          fill
-                          className={`transition-transform duration-500 group-hover:scale-105 ${product.imageUrl.includes(".png") ? "object-contain p-4" : "object-cover"}`}
-                          sizes="80vw"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="text-lg font-bold text-[#071C36] mb-1 leading-snug" style={{ fontFamily: "Manrope, sans-serif" }}>
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-[#A48300] font-semibold uppercase tracking-wide mb-2">
-                          {product.tagline}
-                        </p>
-                        <p className="text-base text-[#6B7280] line-clamp-2 leading-relaxed">
-                          {product.description}
-                        </p>
-                      </div>
-                    </div>
-                    {/* Desktop: full card */}
-                    <div className="group hidden sm:flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
-                      <div className="relative aspect-square overflow-hidden bg-[#F5F7FF]">
-                        <Image
-                          src={product.imageUrl}
-                          alt={product.name}
-                          fill
-                          className={`transition-transform duration-500 group-hover:scale-105 ${product.imageUrl.includes(".png") ? "object-contain p-4" : "object-cover"}`}
-                          sizes="(max-width: 1024px) 33vw, 20vw"
-                        />
-                        <div className="absolute top-2 left-2">
-                          <span className="px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-[#071C36]">
+                  <Link href={`/products/${product.id}`} className="block h-full">
+                    <div className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 h-full border border-gray-100 hover:border-[#D4AF37]/40">
+
+                      {/* ── Pastel image container ── inspired by makinofoods */}
+                      <div className="p-3 pb-0">
+                        <div
+                          className="relative w-full overflow-hidden rounded-xl"
+                          style={{
+                            background: PASTEL_BG[i % PASTEL_BG.length],
+                            aspectRatio: "1 / 1",
+                          }}
+                        >
+                          <Image
+                            src={product.imageUrl}
+                            alt={product.name}
+                            fill
+                            className={`transition-transform duration-500 group-hover:scale-105 ${
+                              product.imageUrl.includes(".png")
+                                ? "object-contain p-4"
+                                : "object-cover"
+                            }`}
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          />
+                          {/* Category pill */}
+                          <span className="absolute top-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] sm:text-xs font-bold text-[#071C36] shadow-sm">
                             {product.category}
                           </span>
                         </div>
                       </div>
-                      <div className="p-4 flex flex-col flex-1">
-                        <h3 className="text-sm sm:text-base font-bold text-[#071C36] mb-0.5 line-clamp-2 leading-snug group-hover:text-[#A48300] transition-colors" style={{ fontFamily: "Manrope, sans-serif" }}>
+
+                      {/* ── Card body ── */}
+                      <div className="flex flex-col flex-1 px-3.5 pt-3 pb-3.5">
+                        {/* Product name */}
+                        <h3
+                          className="text-sm sm:text-[15px] font-extrabold text-[#231F20] leading-snug line-clamp-2 mb-1 group-hover:text-[#A48300] transition-colors duration-200"
+                          style={{ fontFamily: "Manrope, sans-serif" }}
+                        >
                           {product.name}
                         </h3>
-                        <p className="text-xs text-[#A48300] font-semibold uppercase tracking-wide truncate mb-auto">
+
+                        {/* Tagline */}
+                        <p className="text-[11px] sm:text-xs text-[#A48300] font-semibold uppercase tracking-wider mb-3 truncate">
                           {product.tagline}
                         </p>
-                        <div className="flex items-center justify-between border-t border-[#F0F3FF] mt-2 pt-2">
-                          <span className="text-xs text-[#9CA3AF]">MOQ: {product.moq} {product.moqUnit}</span>
-                          <span className="text-[#A48300] text-xs font-bold inline-flex items-center gap-0.5 group-hover:gap-1.5 transition-all">
-                            View <ArrowRight className="w-3 h-3" />
+
+                        {/* Key spec bullets — up to 2, like makinofoods feature icons */}
+                        <div className="flex flex-col gap-1.5 mb-3">
+                          {Object.entries(product.specifications)
+                            .slice(0, 2)
+                            .map(([key, val]) => (
+                              <span
+                                key={key}
+                                className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs text-[#555]"
+                              >
+                                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shrink-0" />
+                                <span className="font-medium">{key}:</span>{" "}
+                                <span className="text-[#071C36] font-semibold truncate">
+                                  {String(val)}
+                                </span>
+                              </span>
+                            ))}
+                        </div>
+
+                        {/* Spacer */}
+                        <div className="flex-1" />
+
+                        {/* MOQ line */}
+                        <p className="text-[10px] sm:text-xs text-[#9CA3AF] mb-2.5">
+                          MOQ:{" "}
+                          <span className="font-bold text-[#071C36]">
+                            {product.moq} {product.moqUnit}
                           </span>
+                        </p>
+
+                        {/* CTA — full-width button inspired by makinofoods yellow cart btn */}
+                        <div className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-[#071C36] text-white text-xs sm:text-sm font-bold group-hover:bg-[#D4AF37] group-hover:text-[#071C36] transition-all duration-300 shadow-sm">
+                          Get Quote
+                          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                         </div>
                       </div>
                     </div>
@@ -194,10 +248,21 @@ export default function ProductsPage() {
           </AnimatePresence>
 
           {filteredProducts.length === 0 && (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20"
+            >
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-bold text-[#071C36] mb-2" style={{ fontFamily: "Playfair Display, serif" }}>No products found</h3>
-              <p className="text-[#6B7280]">Try adjusting your search or category filter.</p>
+              <h3
+                className="text-xl font-bold text-[#071C36] mb-2"
+                style={{ fontFamily: "Playfair Display, serif" }}
+              >
+                No products found
+              </h3>
+              <p className="text-[#6B7280]">
+                Try adjusting your search or category filter.
+              </p>
             </motion.div>
           )}
         </div>
