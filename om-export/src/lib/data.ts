@@ -25,7 +25,7 @@ export const categories: Category[] = [
   },
   {
     id: "grocery",
-    name: "GKC",
+    name: "GKC Snacks",
     icon: "🛒",
     description: "Fresh and packaged grocery items for everyday needs and global export",
     productCount: 15,

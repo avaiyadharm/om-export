@@ -12,7 +12,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   const { id } = use(params);
   const product = products.find((p) => p.id === id);
   const [activeImage, setActiveImage] = useState(0);
-  const [formState, setFormState] = useState({ name: "", country: "", quantity: "", message: "" });
+  const [formState, setFormState] = useState({ name: "", email: "", country: "", quantity: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -43,7 +43,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: formState.name,
-          email: "",
+          email: formState.email,
           subject: `Product Inquiry: ${product.name}`,
           message: formState.message,
           source: "product_inquiry",
@@ -60,7 +60,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       }
 
       setIsSubmitted(true);
-      setFormState({ name: "", country: "", quantity: "", message: "" });
+      setFormState({ name: "", email: "", country: "", quantity: "", message: "" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to send inquiry. Please try again.");
     } finally {
@@ -119,14 +119,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             <div className="lg:col-span-3">
               {/* Image Gallery */}
               <AnimatedSection variant="fadeUp">
-                <div className="bg-white rounded-2xl overflow-hidden mb-8">
-                  <div className="relative aspect-[16/9] overflow-hidden">
+                <div className="bg-white rounded-2xl overflow-hidden mb-8 shadow-lg">
+                  <div className="relative w-full bg-gray-100 flex items-center justify-center" style={{ paddingBottom: '100%' }}>
                     <Image
                       src={product.images[activeImage] || product.imageUrl}
                       alt={product.name}
                       fill
-                      className="object-cover transition-all duration-700"
+                      className="object-contain p-4"
                       sizes="(max-width: 768px) 100vw, 60vw"
+                      priority={activeImage === 0}
                     />
                   </div>
                 </div>
@@ -257,6 +258,19 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                             onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                             className="w-full px-5 py-4 bg-white rounded-xl text-base text-[#071C36] outline-none border-2 border-transparent focus:border-[#D4AF37] transition-all duration-400"
                             placeholder="John Doe"
+                          />
+                        </div>
+                        <div>
+                          <label className="text-xs text-[#6B7280] uppercase tracking-wider font-medium block mb-3">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            required
+                            value={formState.email}
+                            onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                            className="w-full px-5 py-4 bg-white rounded-xl text-base text-[#071C36] outline-none border-2 border-transparent focus:border-[#D4AF37] transition-all duration-400"
+                            placeholder="john@example.com"
                           />
                         </div>
                         <div>

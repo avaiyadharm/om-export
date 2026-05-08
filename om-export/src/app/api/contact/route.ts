@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getSupabase } from '@/lib/supabase';
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,34 +13,31 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const supabase = getSupabase();
+    const formspreeEndpoint = 'https://formspree.io/f/mwvynjar';
 
-    // Check if Supabase is configured
-    if (!supabase) {
-      console.warn('Supabase not configured. Message received but not stored:', { name, email, subject });
-      return NextResponse.json(
-        { success: true, warning: 'Message received but database is not configured yet.' },
-        { status: 200 }
-      );
-    }
-
-    const { error } = await supabase
-      .from('contact_messages')
-      .insert({
+    const response = await fetch(formspreeEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
         name,
-        email: email || null,
-        subject: subject || null,
+        email,
+        subject,
         message,
-        source: source || 'contact_page',
-        product: product || null,
-        country: country || null,
-        quantity: quantity || null,
-      });
+        source,
+        product,
+        country,
+        quantity
+      }),
+    });
 
-    if (error) {
-      console.error('Supabase insert error:', error);
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error('Formspree error:', errorData);
       return NextResponse.json(
-        { error: 'Failed to save message. Please try again.' },
+        { error: 'Failed to send message. Please try again.' },
         { status: 500 }
       );
     }

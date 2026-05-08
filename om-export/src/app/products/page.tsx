@@ -44,66 +44,35 @@ export default function ProductsPage() {
   }, [searchQuery, activeCategory]);
 
   return (
-    <div className="pt-24 min-h-screen bg-[#F9F9FF]">
-      {/* Header */}
-      <section className="bg-[#071C36] py-10 sm:py-16 relative overflow-hidden">
-        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex items-center gap-2 text-white/40 text-base mb-4">
-              <Link href="/" className="hover:text-[#D4AF37] transition-colors">
-                Home
-              </Link>
-
-              <span>/</span>
-
-              <span className="text-white/70">Products</span>
-            </div>
-
-            <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6"
-              style={{ fontFamily: "Playfair Display, serif" }}
-            >
-              Our Export Products
-            </h1>
-
-            <p className="text-white/60 text-xl sm:text-2xl md:text-3xl max-w-2xl leading-[1.7] sm:leading-[1.8]">
-              Browse through our premium export catalog.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-[#F9F9FF]">
 
       {/* Search & Filters */}
-      <section className="sticky top-24 z-30 bg-white/80 backdrop-blur-xl border-b border-[#E7EEFF]">
-        <div className="w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-4 sm:py-6">
-          <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
+      <section className="sticky top-28 sm:top-40 z-40 bg-white shadow-sm border-b border-[#E7EEFF] transition-all duration-300">
+        <div className="w-full mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10">
+          <div className="flex flex-col lg:flex-row gap-6 items-stretch lg:items-center">
             {/* Search */}
-            <div className="relative flex-1 max-w-xl">
-              <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6 text-[#9CA3AF]" />
+            <div className="relative flex-1 max-w-2xl">
+              <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-8 h-8 text-[#9CA3AF]" />
 
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-14 pr-6 py-5 bg-[#F0F3FF] rounded-2xl text-xl text-[#071C36] placeholder-[#9CA3AF] outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:bg-white transition-all duration-300"
+                className="w-full pl-16 pr-8 py-6 sm:py-8 bg-[#F0F3FF] rounded-2xl text-xl sm:text-2xl text-[#071C36] placeholder-[#9CA3AF] outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:bg-white transition-all duration-300"
               />
             </div>
 
             {/* Categories */}
-            <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto pb-1 scrollbar-hide">
-              <SlidersHorizontal className="w-4 h-4 text-[#6B7280] shrink-0 hidden md:block" />
+            <div className="flex items-center gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide w-full lg:w-auto">
+              <SlidersHorizontal className="w-8 h-8 text-[#6B7280] shrink-0 hidden lg:block mr-2" />
 
               <button
                 onClick={() => setActiveCategory("all")}
-                className={`shrink-0 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 ${
+                className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${
                   activeCategory === "all"
-                    ? "bg-[#071C36] text-white"
-                    : "bg-[#F0F3FF] text-[#6B7280]"
+                    ? "bg-[#071C36] text-white shadow-md"
+                    : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#E2E8F0]"
                 }`}
               >
                 All Products
@@ -114,10 +83,10 @@ export default function ProductsPage() {
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`shrink-0 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 ${
+                    className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${
                       activeCategory === cat.id
-                        ? "bg-[#071C36] text-white"
-                        : "bg-[#F0F3FF] text-[#6B7280]"
+                        ? "bg-[#071C36] text-white shadow-md"
+                        : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#E2E8F0]"
                     }`}
                   >
                     {cat.name}
