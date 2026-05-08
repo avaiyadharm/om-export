@@ -1633,7 +1633,7 @@ export const products: Product[] = [
   {
     id: "95",
     name: "Makino Assorted Nachos",
-    description: "Makino Assorted Nachos (Cheese, Jalapeno, Sweet Chilli, Tomato Salsa, Peri Peri, Roasted Masala) - Assorted Range of Snacks. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Premium Makino Assorted Nachos featuring a diverse range of six delicious flavors: Cheese, Jalapeno, Sweet Chilli, Tomato Salsa, Peri Peri, and Roasted Masala. Crafted with 100% Non-GMO corn quality, these crispy nachos deliver irresistible crunch with bold, authentic flavors. Zero cholesterol, gluten-free, and 100% vegetarian, making them the perfect snack for health-conscious consumers across global markets.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk1.webp",
@@ -1653,7 +1653,7 @@ export const products: Product[] = [
   {
     id: "96",
     name: "Makino Cornax (4 Assorted Corn Snacks)",
-    description: "Makino Cornax - 4 Assorted Corn Snacks featuring Cream & Onion, Roasted Masala, and Jalapeno. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free.",
+    description: "Introducing Makino Cornax - an exciting assortment of four premium corn snacks featuring Cream & Onion, Roasted Masala, and Jalapeno varieties. Each bite delivers superior texture and authentic taste made from 100% Non-GMO corn. Loaded with irresistible crunch, zero cholesterol, gluten-free, and free from artificial flavors - ideal for the globally conscious snacker.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk2.webp",
@@ -1673,7 +1673,7 @@ export const products: Product[] = [
   {
     id: "97",
     name: "Makino Assorted Round & Stacked Nachos",
-    description: "Makino Assorted Round & Stacked Nachos (Cheese, Jalapeno) - Best Selling Assorted Range. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free.",
+    description: "Best-selling Makino Round & Stacked Nachos in a versatile two-flavor assortment: Cheese and Jalapeno. This premium nacho offering features perfectly stacked, golden-crispy rounds that deliver authentic taste in every bite. Made with 100% Non-GMO corn, zero cholesterol, gluten-free, and loaded with the hearty crunch consumers love. Export-ready quality for retail and institutional markets.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk3.webp",
@@ -1693,7 +1693,7 @@ export const products: Product[] = [
   {
     id: "98",
     name: "Makino Assorted Corn Munch",
-    description: "Makino Assorted Corn Munch (Cheese, Roasted Masala, Red Chilli Chatka, Cream & Onion) - Best Selling Assorted Range. Zero Cholesterol, No Trans Fat, Gluten-Free.",
+    description: "Experience Makino's best-selling Corn Munch in a dynamic four-flavor assortment: Cheese, Roasted Masala, Red Chilli Chatka, and Cream & Onion. Each variant delivers an explosion of authentic Indian flavors with irresistible crunch. Zero cholesterol, zero trans fat, gluten-free, and crafted from premium corn, this assortment is perfect for consumers seeking diverse, healthy snacking options across global markets.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk4.webp",
@@ -1713,7 +1713,7 @@ export const products: Product[] = [
   {
     id: "99",
     name: "Makino Super Nachos Multigrain Salted",
-    description: "Makino Super Nachos Multigrain Salted - Institution Pack. Non-GMO Corn Quality, No Trans Fat, Gluten-Free Assurance.",
+    description: "Premium Makino Super Nachos in a multigrain salted format, designed specifically for institutional and bulk retail distribution. Featuring 100% Non-GMO corn quality with an enhanced multigrain blend, these super nachos are zero cholesterol, zero trans fat, and gluten-free. Perfect for schools, offices, and international markets seeking premium quality snacking solutions.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk5.webp",
@@ -1733,7 +1733,7 @@ export const products: Product[] = [
   {
     id: "100",
     name: "Makino Roasted Peanuts Salted",
-    description: "Makino Roasted Peanuts Salted - Roasted Peanuts. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Roasted Peanuts Salted - perfectly roasted premium peanuts with just the right amount of salt. Rich in protein and natural nutrients, these roasted peanuts feature zero cholesterol, no trans fat, and are 100% vegetarian. The crispy exterior and tender interior make them an ideal healthy snack for fitness-conscious consumers and health food enthusiasts worldwide.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk6.webp",
@@ -1753,7 +1753,7 @@ export const products: Product[] = [
   {
     id: "101",
     name: "Makino Roasted Peanuts Nimboo Pudina",
-    description: "Makino Roasted Peanuts Nimboo Pudina - New Arrival. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "New arrival: Makino Roasted Peanuts Nimboo Pudina - a delightful fusion of roasted peanuts with refreshing Lemon (Nimboo) and Mint (Pudina) flavors. This innovative snack combines high-quality roasted peanuts with aromatic Indian spices, delivering zero cholesterol and no trans fat. A unique, flavor-packed option for adventurous snackers seeking novel taste experiences.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk7.webp",
@@ -1773,7 +1773,7 @@ export const products: Product[] = [
   {
     id: "102",
     name: "Makino Roasted Peanuts Hing Jeera",
-    description: "Makino Roasted Peanuts Hing Jeera - New Arrival. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "New from Makino: Roasted Peanuts with Hing (Asafoetida) & Jeera (Cumin) seasoning - an authentic Indian snack experience. Crafted with premium roasted peanuts and traditional spices, this new arrival delivers robust flavor and exceptional crunch. Zero cholesterol, no trans fat, and 100% vegetarian, making it a favorite among traditionalists and health-conscious consumers.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk8.webp",
@@ -1793,7 +1793,7 @@ export const products: Product[] = [
   {
     id: "103",
     name: "Makino Corn Munch Indian Masala",
-    description: "Makino Corn Munch Indian Masala - Extruded Corn Snacks. Zero Cholesterol, No Trans Fat, Gluten-Free.",
+    description: "Makino Corn Munch Indian Masala - an exciting extruded corn snack bursting with authentic Indian masala flavors. This premium offering combines crispy corn texture with bold, aromatic spice blends that transport your taste buds to India. Zero cholesterol, zero trans fat, gluten-free, and made with 100% quality ingredients - perfect for authentic snacking experiences.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk16.webp",
@@ -1813,7 +1813,7 @@ export const products: Product[] = [
   {
     id: "104",
     name: "Makino Tortilla Wraps",
-    description: "Makino Tortilla Wraps - New Arrival. Size: 8.5 Inches, Quantity: 6 PCS. Fresh taste for versatile use.",
+    description: "Introducing Makino Tortilla Wraps - perfectly sized at 8.5 inches with 6 PCS per pack. These soft, flexible tortilla wraps are ideal for creating fresh wraps, burritos, and authentic Mexican-Indian fusion meals. Made with quality flour blend and versatile enough for endless culinary creativity, they offer restaurant-quality wrapping for home and professional kitchens alike.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk17.webp",
@@ -1833,7 +1833,7 @@ export const products: Product[] = [
   {
     id: "105",
     name: "Makino Assorted Roasted Peanuts",
-    description: "Makino Assorted Roasted Peanuts - Roasted Peanuts. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Assorted Roasted Peanuts collection featuring multiple delicious flavors and seasonings. Each variant is carefully roasted to perfection, delivering maximum crunch and flavor. Zero cholesterol, no trans fat, high protein content, and 100% vegetarian - making them an ideal healthy snack for fitness enthusiasts and health-conscious consumers globally.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk18.webp",
@@ -1853,7 +1853,7 @@ export const products: Product[] = [
   {
     id: "106",
     name: "Makino Discounted Combo Bag with 3 Assorted Nachos & 1 Salsa Dip",
-    description: "Makino Discounted Combo Bag with 3 Assorted Nachos & 1 Salsa Dip - Our Special Packs. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino's special promotional combo bag - a fantastic value package featuring 3 assorted nacho varieties paired with a delicious salsa dip. This convenient combination makes entertaining and snacking effortless. All made with 100% Non-GMO corn, zero cholesterol, and zero trans fat. Perfect for parties, game nights, and creating memorable moments with family and friends.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk19.webp",
@@ -1873,7 +1873,7 @@ export const products: Product[] = [
   {
     id: "107",
     name: "Makino Super Nachos Millets Yogurt Masala Pack of 6",
-    description: "Makino Super Nachos Millets Yogurt Masala Pack of 6 - Super Nachos. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Premium Makino Super Nachos featuring a sophisticated Millets & Yogurt Masala blend - a unique fusion of multigrain nutrition and authentic Indian flavors. This 6-pack offers convenient portions with zero cholesterol, zero trans fat, and the added nutritional benefits of millets. Perfect for health-conscious consumers seeking traditional flavors with modern nutritional superiority.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk20.webp",
@@ -1893,7 +1893,7 @@ export const products: Product[] = [
   {
     id: "108",
     name: "Makino Assorted Super Nachos (3 Multigrain Salted & 3 Millet Yogurt Masala)",
-    description: "Makino Assorted Super Nachos (3 Multigrain Salted & 3 Millet Yogurt Masala) - Super Nachos. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Exclusive Makino Super Nachos assortment combining 3 packs of Multigrain Salted with 3 packs of Millet Yogurt Masala. This thoughtfully curated combo showcases both traditional and innovative flavors, all made with premium non-GMO ingredients. No onion, no garlic formulation makes it perfect for Jain diets. Zero cholesterol and trans-fat free for guilt-free indulgence.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk21.webp",
@@ -1913,7 +1913,7 @@ export const products: Product[] = [
   {
     id: "109",
     name: "Makino Nacho Chips Jalapeno 200gm Institution Pack of 72",
-    description: "Makino Nacho Chips Jalapeno 200gm Institution Pack of 72 - Bulk Pack for Retail. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Nacho Chips Jalapeno in a comprehensive institution pack of 72 units at 200gm each - designed for schools, offices, cafeterias, and bulk retailers. Delivers consistent quality and taste across large quantities. Featuring 100% Non-GMO corn, zero cholesterol, zero trans fat, and exceptional value. Perfect for institutional purchasing and direct-to-consumer distribution.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk22.webp",
@@ -1933,7 +1933,7 @@ export const products: Product[] = [
   {
     id: "110",
     name: "Makino Assorted No Onion No Garlic Nacho Chips 60gm Pack of 120",
-    description: "Makino Assorted No Onion No Garlic Nacho Chips 60gm Pack of 120 - Bulk Pack for Retail. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free.",
+    description: "Makino's specially formulated No Onion No Garlic Nacho Chips - perfect for Jain consumers and those with dietary restrictions. This bulk pack of 120 units (60gm each) offers assorted flavors without compromising on taste. Made with 100% Non-GMO corn, zero cholesterol, gluten-free, and certified for dietary purity. Ideal for institutional and retail bulk distribution.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk23.webp",
@@ -1953,7 +1953,7 @@ export const products: Product[] = [
   {
     id: "111",
     name: "Makino Nacho Chips Sweet Chilli 60gm Pack of 120",
-    description: "Makino Nacho Chips Sweet Chilli 60gm Pack of 120 - Bulk Pack for Retail. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Nacho Chips Sweet Chilli - a perfectly balanced blend of sweetness and spice in convenient 60gm portions. This bulk pack of 120 units is ideal for retail chains, convenience stores, and institutional buyers. Made with 100% Non-GMO corn, zero cholesterol, zero trans fat, and delivering authentic sweet-chilli flavors that consumers love.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk24.webp",
@@ -1973,7 +1973,7 @@ export const products: Product[] = [
   {
     id: "112",
     name: "Makino Nacho Chips Tomato Salsa 60gm Pack of 120",
-    description: "Makino Nacho Chips Tomato Salsa 60gm Pack of 120 - Bulk Pack for Retail. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Nacho Chips Tomato Salsa in a bulk distribution pack of 120 units (60gm each). Featuring the bold, zesty flavors of fresh tomato salsa infused into crispy nacho chips. 100% Non-GMO corn, zero cholesterol, zero trans fat, and perfect for both retail chains and food service operators seeking quality bulk snack solutions.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk25.webp",
@@ -1993,7 +1993,7 @@ export const products: Product[] = [
   {
     id: "113",
     name: "Makino Assorted Corn Munch (Cream & Onion, Red Chilli Chatka) Pack of 7 - 3 pcs",
-    description: "Makino Assorted Corn Munch (Cream & Onion, Red Chilli Chatka) Pack of 7 - 3 pcs. First Time in India. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Exciting first-time-in-India offering: Makino Assorted Corn Munch featuring Cream & Onion and Red Chilli Chatka flavors in a convenient 7-pack (3 pieces). This innovative packaging combines two beloved flavors for ultimate variety. Made with 100% Non-GMO corn, zero cholesterol, zero trans fat, and offering authentic taste that sets new snacking standards in Indian markets.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk26.webp",
@@ -2013,7 +2013,7 @@ export const products: Product[] = [
   {
     id: "114",
     name: "Makino Corn Munch Cream & Onion Pack of 3",
-    description: "Makino Corn Munch Cream & Onion Pack of 3 - First Time in India. Zero Cholesterol, Gluten-Free, No Trans Fat.",
+    description: "Makino Corn Munch Cream & Onion - a delightful flavor combination that's making its debut in India. This 3-pack offers the perfect balance of creamy and savory notes with authentic onion essence. Zero cholesterol, gluten-free, zero trans fat, and crafted from premium corn, making it an ideal introduction to Makino's innovative Corn Munch line.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk27.webp",
@@ -2033,7 +2033,7 @@ export const products: Product[] = [
   {
     id: "115",
     name: "Makino Nacho Chips Cheese Pack of 6",
-    description: "Makino Nacho Chips Cheese Pack of 6 - Nachos. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Nacho Chips Cheese - an indulgent offering featuring rich, creamy cheese flavors on perfectly crispy nacho chips. The 6-pack format provides convenient portions for sampling or small-group sharing. Made with 100% Non-GMO corn, zero cholesterol, zero trans fat, and delivering that irresistible cheese taste consumers crave.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk28.webp",
@@ -2053,7 +2053,7 @@ export const products: Product[] = [
   {
     id: "116",
     name: "Makino Nacho Chips Jalapeno Pack of 6",
-    description: "Makino Nacho Chips Jalapeno Pack of 6 - Nachos. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Makino Nacho Chips Jalapeno delivers authentic spicy kick with fiery jalapeno flavors on crispy nacho chips. This 6-pack format is perfect for snackers seeking bold, adventurous flavors. Made with 100% Non-GMO corn, zero cholesterol, gluten-free assurance, and packed with genuine jalapeno essence that true spice lovers appreciate.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk29.webp",
@@ -2073,7 +2073,7 @@ export const products: Product[] = [
   {
     id: "117",
     name: "Makino Nacho Chips Sweet Chilli Pack of 6",
-    description: "Makino Nacho Chips Sweet Chilli Pack of 6 - Nachos. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Makino Nacho Chips Sweet Chilli - a harmonious blend of sweet and spicy flavors that delights the palate. Each chip delivers a perfect balance of authentic chilli heat with subtle sweetness. The 6-pack offers great value with 100% Non-GMO corn, zero cholesterol, gluten-free assurance, and consistent quality throughout.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk30.webp",
@@ -2093,7 +2093,7 @@ export const products: Product[] = [
   {
     id: "118",
     name: "Makino Nacho Chips Tomato Salsa Pack of 6",
-    description: "Makino Nacho Chips Tomato Salsa Pack of 6 - Nachos. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Makino Nacho Chips Tomato Salsa captures the fresh, vibrant essence of authentic salsa on perfectly crispy nacho chips. The 6-pack format provides ideal portions for casual snacking or party appetizers. Made with 100% Non-GMO corn, zero cholesterol, gluten-free, and delivering genuine tomato salsa flavors that transport you to a fiesta.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk31.webp",
@@ -2113,7 +2113,7 @@ export const products: Product[] = [
   {
     id: "119",
     name: "Makino Super Nachos Millets Yogurt Masala 60gm Pack of 6",
-    description: "Makino Super Nachos Millets Yogurt Masala 60gm Pack of 6 - Super Nachos. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Super Nachos Millets Yogurt Masala - an innovative fusion combining nutritious millets with creamy yogurt masala flavors on super crispy nachos. Each 60gm pack delivers premium quality with 100% Non-GMO corn, zero cholesterol, zero trans fat, and exceptional taste. The 6-pack offers variety and convenience for health-conscious snackers.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk32.webp",
@@ -2133,7 +2133,7 @@ export const products: Product[] = [
   {
     id: "120",
     name: "Makino Corn Munch Indian Masala Pack of 3",
-    description: "Makino Corn Munch Indian Masala Pack of 3 - Extruded Corn Snacks. Zero Cholesterol, No Trans Fat, Gluten-Free.",
+    description: "Makino Corn Munch Indian Masala - an extruded corn snack bursting with aromatic Indian spices and bold masala flavors. This 3-pack format offers convenient portions for individual enjoyment or small-group sharing. Zero cholesterol, zero trans fat, gluten-free, and delivering authentic Indian taste that satisfies cravings for traditional snack experiences.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk33.webp",
@@ -2153,7 +2153,7 @@ export const products: Product[] = [
   {
     id: "121",
     name: "Makino Assorted Corn Munch (Cream & Onion, Red Chilli Chatka, Tomato) Pack of 3",
-    description: "Makino Assorted Corn Munch (Cream & Onion, Red Chilli Chatka, Tomato) Pack of 3 - Extruded Corn Snacks. Zero Cholesterol, No Trans Fat, Gluten-Free.",
+    description: "Makino's premium Assorted Corn Munch pack featuring three irresistible flavors: Cream & Onion, Red Chilli Chatka, and Tomato. This expertly curated 3-pack showcases the diversity of Makino's extruded corn snack line. Zero cholesterol, zero trans fat, gluten-free, and offering three distinct taste adventures in one convenient package.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk34.webp",
@@ -2173,7 +2173,7 @@ export const products: Product[] = [
   {
     id: "122",
     name: "Makino Assorted Super Nachos 3 Multigrain Salted Pack",
-    description: "Makino Assorted Super Nachos 3 Multigrain Salted Pack - Super Nachos. Non-GMO Corn Quality, No Trans Fat, Gluten-Free Assurance.",
+    description: "Makino's premium Super Nachos featuring sophisticated Multigrain Salted seasoning across a convenient 3-pack. This wholesome formulation combines multiple grain varieties for enhanced nutrition and authentic flavor depth. 100% Non-GMO corn quality, zero trans fat, gluten-free assurance, making it perfect for health-conscious consumers seeking premium snacking.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk35.webp",
@@ -2193,7 +2193,7 @@ export const products: Product[] = [
   {
     id: "123",
     name: "Makino Roasted Peanuts Garlic Pack of 4",
-    description: "Makino Roasted Peanuts Garlic Pack of 4 - Roasted Peanuts. Non-GMO Corn Quality, Gluten-Free, Zero Cholesterol.",
+    description: "Makino Roasted Peanuts with Garlic seasoning - premium roasted peanuts infused with robust garlic flavors. This 4-pack offers aromatic, savory enjoyment with 100% Non-GMO quality, gluten-free formulation, and zero cholesterol. Perfect for those seeking bold, garlic-forward flavors combined with the nutritional benefits of high-protein roasted peanuts.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk36.webp",
@@ -2213,7 +2213,7 @@ export const products: Product[] = [
   {
     id: "124",
     name: "Makino Assorted Roasted Peanuts Pack of 5",
-    description: "Makino Assorted Roasted Peanuts Pack of 5 - Roasted Peanuts. Non-GMO Corn Quality, Gluten-Free, No Trans Fat.",
+    description: "Makino's premium Assorted Roasted Peanuts Pack offers five diverse flavors, each delivering authentic taste and premium quality. High protein content, gluten-free, zero trans fat, and featuring 100% Non-GMO sourcing. This comprehensive assortment provides ultimate variety for consumers seeking multiple flavor experiences in one convenient package.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk37.webp",
@@ -2233,7 +2233,7 @@ export const products: Product[] = [
   {
     id: "125",
     name: "Makino Nacho Chips Roasted Masala 60gm Pack of 120",
-    description: "Makino Nacho Chips Roasted Masala 60gm Pack of 120 - Bulk Pack for Retail. Non-GMO Corn Quality, Gluten-Free, Zero Cholesterol.",
+    description: "Makino Nacho Chips Roasted Masala in a comprehensive bulk pack of 120 units (60gm each) - perfect for retail distribution and institutional purchasing. Featuring aromatic roasted masala seasoning on crispy nacho chips with 100% Non-GMO corn, gluten-free, and zero cholesterol. Ideal for cost-conscious bulk buyers seeking premium quality.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk38.webp",
@@ -2253,7 +2253,7 @@ export const products: Product[] = [
   {
     id: "126",
     name: "Makino Salted Peanuts Institution Pack 1 KG",
-    description: "Makino Salted Peanuts Institution Pack 1 KG - Institution Pack. High Protein, Peanut without Skin, Jumbo Size.",
+    description: "Makino Premium Salted Peanuts in a convenient 1 KG institution pack - ideal for schools, offices, and food service operations. Featuring jumbo-sized, skinless peanuts with perfect salt seasoning. High protein content, zero cholesterol, gluten-free, and delivering premium quality roasted peanut experience with superior nutritional value.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk39.webp",
@@ -2313,7 +2313,7 @@ export const products: Product[] = [
   {
     id: "129",
     name: "Makino Corn Munch Tomato Pack of 3",
-    description: "Makino Corn Munch Tomato Pack of 3 - Extruded Corn Snacks. No Trans Fat, Zero Cholesterol, Gluten-Free.",
+    description: "Makino Corn Munch Tomato - a bold, tangy variation featuring authentic tomato flavors on crispy extruded corn snacks. This 3-pack offers convenient portions with zero trans fat, zero cholesterol, and gluten-free assurance. Perfect for those seeking vibrant tomato-forward taste in a healthier snacking option.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk42.webp",
@@ -2353,7 +2353,7 @@ export const products: Product[] = [
   {
     id: "131",
     name: "Makino Roasted Peanuts Hing Jeera Pack of 4",
-    description: "Makino Roasted Peanuts Hing Jeera Pack of 4 - Roasted Peanuts. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free.",
+    description: "Makino Roasted Peanuts Hing Jeera - a sophisticated 4-pack featuring premium roasted peanuts with traditional Hing (Asafoetida) and Jeera (Cumin) seasoning. This authentic Indian flavor combination delivers zero cholesterol, zero trans fat, and gluten-free nutrition. Perfect for traditionalists seeking bold, aromatic peanut snacking.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk44.webp",
@@ -2373,7 +2373,7 @@ export const products: Product[] = [
   {
     id: "132",
     name: "Makino Roasted Peanuts Nimboo Pudina Pack of 4",
-    description: "Makino Roasted Peanuts Nimboo Pudina Pack of 4 - Roasted Peanuts. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free.",
+    description: "Makino Roasted Peanuts Nimboo Pudina - a refreshing 4-pack combining premium roasted peanuts with zesty Lemon (Nimboo) and cooling Mint (Pudina) flavors. This innovative blend delivers zero cholesterol, gluten-free nutrition, and authentic taste. Perfect for adventurous snackers seeking unique, refreshing flavor experiences.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk45.webp",
@@ -2393,7 +2393,7 @@ export const products: Product[] = [
   {
     id: "133",
     name: "Makino Roasted Peanuts Salted Pack of 4",
-    description: "Makino Roasted Peanuts Salted Pack of 4 - Roasted Peanuts. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Roasted Peanuts Salted - a classic 4-pack of perfectly roasted peanuts with ideal salt seasoning. Delivering high protein nutrition, zero cholesterol, zero trans fat, and 100% vegetarian quality. This timeless favorite is perfect for health-conscious consumers seeking simple, nutritious snacking perfection.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk46.webp",
@@ -2493,7 +2493,7 @@ export const products: Product[] = [
   {
     id: "138",
     name: "Makino Jalapeno Nacho Chips with Institution Pack Pack of 3",
-    description: "Makino Jalapeno Nacho Chips with Institution Pack Pack of 3 - Special Packs by Makino. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino Jalapeno Nacho Chips with Institution Pack - a 3-pack offering that combines the fiery kick of jalapeno peppers with crispy nacho chips. Perfect for institutional distribution with 100% Non-GMO corn, zero cholesterol, zero trans fat, and gluten-free assurance. Delivers authentic spicy enjoyment across large-scale operations.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk51.webp",
@@ -2513,7 +2513,7 @@ export const products: Product[] = [
   {
     id: "139",
     name: "Makino Corn Munch Tomato Pack of 3",
-    description: "Makino Corn Munch Tomato Pack of 3 - Special Packs by Makino. No Trans Fat, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Makino Corn Munch Tomato - Makino's special tomato-flavored variation offering bold, tangy taste on crispy extruded corn snacks. This 3-pack delivers zero trans fat, zero cholesterol, and gluten-free nutrition. Perfect for those seeking vibrant, authentic tomato flavors combined with premium snacking quality.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk52.webp",
@@ -2534,7 +2534,7 @@ export const products: Product[] = [
   {
     id: "140",
     name: "Makino Cheese Round & Stacked Nachos Pack of 2",
-    description: "Makino Cheese Round & Stacked Nachos - Pack of 2. Best Selling Assorted Range. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Makino's best-selling Cheese Round & Stacked Nachos in a convenient 2-pack format. Featuring perfectly stacked, golden-crispy nachos infused with rich cheese flavors. Made with 100% Non-GMO corn, zero cholesterol, gluten-free, and delivering that irresistible cheese taste that makes these nachos a consumer favorite.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk53.webp",
@@ -2554,7 +2554,7 @@ export const products: Product[] = [
   {
     id: "141",
     name: "Makino Jalapeno Round & Stacked Nachos Pack of 2",
-    description: "Makino Jalapeno Round & Stacked Nachos - Pack of 2. Best Selling Assorted Range. Non-GMO Corn Quality, Zero Cholesterol, Gluten-Free Assurance.",
+    description: "Makino's best-selling Jalapeno Round & Stacked Nachos in a convenient 2-pack format. Featuring perfectly stacked, golden-crispy nachos with fiery jalapeno seasoning. Made with 100% Non-GMO corn, zero cholesterol, gluten-free, and delivering authentic spicy kick that thrill-seeking snackers crave.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk54.webp",
@@ -2674,7 +2674,7 @@ export const products: Product[] = [
   {
     id: "147",
     name: "Makino High Protein Super Nachos Indian Chaat Pack of 6",
-    description: "Makino High Protein Super Nachos Indian Chaat - Pack of 6. Super Nachos. Non-GMO Corn Quality, Zero Cholesterol, No Trans Fat.",
+    description: "Makino High Protein Super Nachos with Indian Chaat flavors - a nutritionally-enhanced 6-pack offering premium protein content combined with authentic Indian street food tastes. Made with 100% Non-GMO corn, zero cholesterol, zero trans fat. Perfect for fitness enthusiasts and Chaat lovers seeking healthy, flavorful snacking with nutritional superiority.",
     category: "Makino",
     categoryId: "makino",
     imageUrl: "/mk60.webp",
@@ -3100,21 +3100,21 @@ export const founders: Founder[] = [
     name: "Jayesh Avaiya",
     title: "Founder",
     phone: "+91 99253 53952",
-    email: "[EMAIL_ADDRESS]",
+    email: "avaiyaj23@gmail.com",
     image: "/founders/jayesh.jpg",
   },
   {
     name: "Dipak Nakrani",
     title: "Founder",
     phone: "+91 97146 91751",
-    email: "[EMAIL_ADDRESS]",
+    email: "shreenathjifashion97@gmail.com",
     image: "/founders/dipak.jpg",
   },
   {
     name: "Kalpesh Sabhani",
     title: "Founder",
-    phone: "+91 99097 88944",
-    email: "[EMAIL_ADDRESS]",
+    phone: "+91 99097 88944", 
+    email: "kalpeshsabhani27@gmail.com",
     image: "/founders/kalpesh.jpg",
   },
 ];
