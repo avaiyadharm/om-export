@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-lg leading-relaxed mb-8">
-              Connecting businesses worldwide with premium Indian exports. 
+              Connecting businesses worldwide with premium Indian exports.
               Your trusted partner in global trade since 2015.
             </p>
           </div>

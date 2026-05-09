@@ -27,11 +27,10 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-      className={`sticky top-0 z-50 transition-all duration-500 ${
-        isScrolled
+      className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled
           ? "bg-[#051120]/95 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-white/5"
           : "bg-[#051120]"
-      }`}
+        }`}
     >
       <div className="w-full mx-auto px-8 sm:px-12 md:px-20 lg:px-32 xl:px-40">
         <div className="flex items-center justify-between h-28 sm:h-40">

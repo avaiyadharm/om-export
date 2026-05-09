@@ -69,11 +69,10 @@ export default function ProductsPage() {
 
               <button
                 onClick={() => setActiveCategory("all")}
-                className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${
-                  activeCategory === "all"
+                className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${activeCategory === "all"
                     ? "bg-[#071C36] text-white shadow-md"
                     : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#E2E8F0]"
-                }`}
+                  }`}
               >
                 All Products
               </button>
@@ -83,11 +82,10 @@ export default function ProductsPage() {
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${
-                      activeCategory === cat.id
+                    className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${activeCategory === cat.id
                         ? "bg-[#071C36] text-white shadow-md"
                         : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#E2E8F0]"
-                    }`}
+                      }`}
                   >
                     {cat.name}
                   </button>
@@ -149,11 +147,10 @@ export default function ProductsPage() {
                             src={product?.imageUrl || "/placeholder.png"}
                             alt={product?.name || "Product"}
                             fill
-                            className={`transition-transform duration-500 group-hover:scale-105 ${
-                              product?.imageUrl?.includes(".png")
+                            className={`transition-transform duration-500 group-hover:scale-105 ${product?.imageUrl?.includes(".png")
                                 ? "object-contain p-4"
                                 : "object-cover"
-                            }`}
+                              }`}
                             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                           />
 

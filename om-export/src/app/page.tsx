@@ -343,9 +343,8 @@ export default function HomePage() {
                 {founders.map((founder, i) => (
                   <div
                     key={founder.name}
-                    className={`bg-white rounded-xl sm:rounded-2xl p-5 sm:p-7 text-center ${
-                      i === 1 ? "sm:translate-y-6" : ""
-                    }`}
+                    className={`bg-white rounded-xl sm:rounded-2xl p-5 sm:p-7 text-center ${i === 1 ? "sm:translate-y-6" : ""
+                      }`}
                   >
                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#0B1F3A] to-[#1a3a5c] mx-auto mb-3 sm:mb-4 flex items-center justify-center">
                       <span className="text-white text-lg sm:text-xl font-bold">

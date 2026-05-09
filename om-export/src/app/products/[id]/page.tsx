@@ -137,11 +137,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                       <button
                         key={i}
                         onClick={() => setActiveImage(i)}
-                        className={`relative w-16 h-16 sm:w-22 sm:h-22 rounded-xl overflow-hidden transition-all duration-500 ${
-                          activeImage === i
+                        className={`relative w-16 h-16 sm:w-22 sm:h-22 rounded-xl overflow-hidden transition-all duration-500 ${activeImage === i
                             ? "ring-2 ring-[#D4AF37] ring-offset-3"
                             : "opacity-60 hover:opacity-100"
-                        }`}
+                          }`}
                       >
                         <Image src={img} alt="" fill className="object-cover" sizes="88px" />
                       </button>
