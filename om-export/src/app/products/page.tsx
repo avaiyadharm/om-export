@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, ArrowRight, SlidersHorizontal } from "lucide-react";
+import { Search, ArrowRight, SlidersHorizontal, Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { products, categories } from "@/lib/data";
@@ -47,50 +47,55 @@ export default function ProductsPage() {
     <div className="min-h-screen bg-[#F9F9FF]">
 
       {/* Search & Filters */}
-      <section className="sticky top-28 sm:top-40 z-40 bg-white shadow-sm border-b border-[#E7EEFF] transition-all duration-300">
-        <div className="w-full mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10">
-          <div className="flex flex-col lg:flex-row gap-6 items-stretch lg:items-center">
-            {/* Search */}
-            <div className="relative flex-1 max-w-2xl">
-              <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-8 h-8 text-[#9CA3AF]" />
-
+      <section className="sticky top-28 sm:top-40 z-40 flex flex-col shadow-sm transition-all duration-300">
+        {/* Search Bar */}
+        <div className="bg-white border-b border-[#E7EEFF] py-4 sm:py-6 w-full">
+          <div className="w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 left-0 pl-5 sm:pl-6 flex items-center pointer-events-none">
+                <Search className="w-6 h-6 text-[#9CA3AF]" />
+              </div>
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-16 pr-8 py-6 sm:py-8 bg-[#F0F3FF] rounded-2xl text-xl sm:text-2xl text-[#071C36] placeholder-[#9CA3AF] outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:bg-white transition-all duration-300"
+                style={{ paddingLeft: '3.5rem', paddingRight: '1.5rem' }}
+                className="w-full py-3 sm:py-4 bg-[#F0F3FF] rounded-xl text-lg sm:text-xl text-[#071C36] placeholder-[#9CA3AF] outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:bg-white transition-all duration-300"
               />
             </div>
+          </div>
+        </div>
 
-            {/* Categories */}
-            <div className="flex items-center gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide w-full lg:w-auto">
-              <SlidersHorizontal className="w-8 h-8 text-[#6B7280] shrink-0 hidden lg:block mr-2" />
+        {/* Amazon-style Categories Navigation */}
+        <div className="bg-[#071C36] text-white w-full border-t border-white/10">
+          <div className="w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 flex items-center h-[52px] overflow-x-auto scrollbar-hide gap-1 sm:gap-2 text-[14px] sm:text-[15px] font-medium">
+            <button
+              onClick={() => setActiveCategory("all")}
+              className={`grow flex items-center justify-center gap-1.5 shrink-0 px-4 py-2 rounded-[2px] border transition-all duration-200 ${
+                activeCategory === "all"
+                  ? "border-white font-bold bg-white/5"
+                  : "border-transparent hover:border-white hover:bg-white/5"
+              }`}
+            >
+              <Menu className="w-[18px] h-[18px]" />
+              <span className="font-bold whitespace-nowrap">All</span>
+            </button>
 
-              <button
-                onClick={() => setActiveCategory("all")}
-                className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${activeCategory === "all"
-                    ? "bg-[#071C36] text-white shadow-md"
-                    : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#E2E8F0]"
+            {Array.isArray(categories) &&
+              categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`grow flex items-center justify-center shrink-0 px-4 py-2 rounded-[2px] border transition-all duration-200 whitespace-nowrap ${
+                    activeCategory === cat.id
+                      ? "border-white font-bold bg-white/5"
+                      : "border-transparent hover:border-white hover:bg-white/5"
                   }`}
-              >
-                All Products
-              </button>
-
-              {Array.isArray(categories) &&
-                categories.map((cat) => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
-                    className={`shrink-0 px-8 sm:px-10 py-5 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-300 ${activeCategory === cat.id
-                        ? "bg-[#071C36] text-white shadow-md"
-                        : "bg-[#F0F3FF] text-[#6B7280] hover:bg-[#E2E8F0]"
-                      }`}
-                  >
-                    {cat.name}
-                  </button>
-                ))}
-            </div>
+                >
+                  {cat.name}
+                </button>
+              ))}
           </div>
         </div>
       </section>

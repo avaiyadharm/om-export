@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "OM Export is a premier global trade and export company specializing in Dairy, Electronics, Garments, Cereals, Pharmaceuticals, Chemicals, Petroleum, Textiles, Mechanical Equipment, and Jewellery exports to 50+ countries.",
   keywords:
     "export, import, global trade, Indian exports, dairy, electronics, garments, pharmaceuticals, jewellery, wholesale, bulk export",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "OM Export — Global Trade & Export Services",
     description:
