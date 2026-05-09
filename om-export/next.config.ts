@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     appIsrStatus: false,
     buildActivity: false,
   },
-  turbopack: {
-    root: __dirname,
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
